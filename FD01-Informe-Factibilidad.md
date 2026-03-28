@@ -10,19 +10,19 @@
 
 **Escuela Profesional de Ingeniería de Sistemas**
 
-**Proyecto *VALIDADOR DE SINTAXIS SQL U OTRA***
+**Proyecto *"VALIDADOR DE SINTAXIS SQL U OTRA"***
 
-Curso: *{Nombre de Asignatura}*
+Curso: *Base de Datos II*
 
-Docente: *{Nombre de Docente}*
+Docente: *Mag. Patrick Cuadros Quiroga*
 
 Integrantes:
 
-***{Apellidos y nombres del estudiante (código universitario)}***
+***Soto Oquendo Cristian Gabriel (2026086510)***
 
 **Tacna – Perú**
 
-***{Año}***
+***2026***
 
 **  
 **
