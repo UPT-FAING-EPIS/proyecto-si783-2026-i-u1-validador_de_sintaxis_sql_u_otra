@@ -19,6 +19,7 @@ Docente: *Mag. Patrick Cuadros Quiroga*
 Integrantes:
 
 ***Soto Oquendo Cristian Gabriel (2026086510)***
+***Arocutipa Arocutipa Gian Franco (2023076790)***
 
 **Tacna – Perú**
 
