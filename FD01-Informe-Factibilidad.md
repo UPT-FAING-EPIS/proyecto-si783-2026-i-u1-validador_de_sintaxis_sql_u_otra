@@ -10,7 +10,7 @@
 
 **Escuela Profesional de Ingeniería de Sistemas**
 
-**Proyecto *{Nombre de Proyecto}***
+**Proyecto *VALIDADOR DE SINTAXIS SQL U OTRA***
 
 Curso: *{Nombre de Asignatura}*
 
