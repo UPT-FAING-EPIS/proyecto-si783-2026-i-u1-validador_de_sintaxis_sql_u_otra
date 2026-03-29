@@ -31,21 +31,21 @@ Integrantes:
 
 ---
 
-**Sistema Validador de sintaxis SQL u otra**  
-**Informe de Factibilidad**  
-**Versión:** *{1.0}*[cite: 4]
+# **Sistema Validador de Sintaxis SQL u otra**
+## **Informe de Factibilidad**
+**Versión:** 1.0  
 
 ### **CONTROL DE VERSIONES**
 | Versión | Hecha por | Revisada por | Aprobada por | Fecha | Motivo |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1.0 | MPV | ELV | ARV | 10/10/2020 | Versión Original[cite: 4] |
+| 1.0 | Soto / Arocutipa | Patrick Cuadros | Patrick Cuadros | 28/03/2026 | Versión Original y Completa |
 
 ---
 
-# **INDICE GENERAL**
+# **ÍNDICE GENERAL**
 1. [Descripción del Proyecto](#1-descripción-del-proyecto)
 2. [Riesgos](#2-riesgos)
-3. [Análisis de la Situación actual](#3-análisis-de-la-situación-actual)
+3. [Análisis de la Situación Actual](#3-análisis-de-la-situación-actual)
 4. [Estudio de Factibilidad](#4-estudio-de-factibilidad)
     - 4.1 [Factibilidad Técnica](#41-factibilidad-técnica)
     - 4.2 [Factibilidad Económica](#42-factibilidad-económica)
@@ -61,139 +61,149 @@ Integrantes:
 ## **1. Descripción del Proyecto**
 
 ### **1.1 Nombre del proyecto**
-Validador de Sintaxis SQL u otra[cite: 4].
+**Validador de Sintaxis SQL u otra.**
 
 ### **1.2 Duración del proyecto**
-1 mes[cite: 4].
+El cronograma de trabajo está diseñado para completarse en **1 mes (4 semanas)**, abarcando desde el análisis de requerimientos hasta las pruebas finales y documentación.
 
-### **1.3 Descripción**
-El proyecto consiste en el desarrollo de una herramienta de software a nivel local que permite realizar el análisis léxico y sintáctico de consultas para bases de datos relacionales (SQL) y documentales (NoSQL/JSON)[cite: 4]. Se desenvuelve en un contexto académico y de desarrollo de software, sirviendo como un entorno de pruebas preliminar y ligero para evitar errores de sintaxis antes de la ejecución en motores de bases de datos reales[cite: 4].
+### **1.3 Descripción Detallada**
+El proyecto consiste en el diseño y desarrollo de una herramienta de software multiplataforma de ejecución local. Su función principal es actuar como un intermediario entre el desarrollador y el motor de base de datos, realizando el **análisis léxico y sintáctico** de consultas relacionales (SQL) y estructuras documentales (NoSQL/JSON). 
+
+A diferencia de un DBMS completo, este software es ligero y no requiere conexión a un servidor, permitiendo validar la integridad gramatical de los scripts de forma aislada. Esto es especialmente útil en entornos educativos donde los errores de sintaxis pueden ser difíciles de diagnosticar directamente en la consola del servidor.
 
 ### **1.4 Objetivos**
-*   **1.4.1 Objetivo general:** Desarrollar un software eficiente que valide la estructura gramatical básica de sentencias SQL y comandos NoSQL sin necesidad de conexión a un servidor de base de datos[cite: 4].
-*   **1.4.2 Objetivos Específicos:**
-    *   Implementar un analizador léxico (Lexer) capaz de reconocer tokens, palabras reservadas y operadores básicos de manera optimizada[cite: 4].
-    *   Construir un Parser para validar reglas gramaticales estrictas y de nivel único para estructuras relacionales (SELECT, INNER JOIN simple) y comandos NoSQL (find())[cite: 4].
-    *   Desarrollar un sistema de reporte que indique la línea exacta y el token donde ocurre un error sintáctico[cite: 4].
+
+#### **1.4.1 Objetivo General**
+Desarrollar un motor de validación eficiente y de alta precisión que sea capaz de verificar la estructura gramatical de sentencias SQL y NoSQL, garantizando que cumplan con los estándares de sintaxis antes de su implementación real.
+
+#### **1.4.2 Objetivos Específicos**
+*   **Implementación de Lexer:** Desarrollar un analizador léxico capaz de descomponer cadenas de texto en tokens reconocibles (palabras reservadas, operadores, literales).
+*   **Desarrollo de Parser:** Construir un analizador sintáctico para validar reglas gramaticales específicas como cláusulas SELECT, joins simples y estructuras NoSQL como `.find()`.
+*   **Reporte de Errores:** Implementar una interfaz de salida que notifique al usuario la ubicación exacta (línea y columna) y la naturaleza del error detectado.
+*   **Optimización Académica:** Proveer una herramienta de apoyo que reduzca la curva de aprendizaje en el manejo de bases de datos.
 
 ---
 
 ## **2. Riesgos**
-*   **Desviación del alcance:** Intentar incorporar reglas gramaticales anidadas o complejas que excedan el tiempo planificado[cite: 4].
-*   **Limitaciones de rendimiento:** Si no se gestionan correctamente los ciclos de lectura de cadenas de texto muy largas[cite: 4].
-*   **Curva de aprendizaje:** En la implementación de algoritmos de parsing manual[cite: 4].
+*   **Ambigüedad Gramatical:** El riesgo de que el Parser no identifique correctamente sentencias complejas o anidadas si no se definen bien las reglas de producción.
+*   **Desviación del Cronograma:** Debido a la complejidad intrínseca de los algoritmos de parsing manual, existe la posibilidad de requerir más tiempo del asignado.
+*   **Rendimiento de Lectura:** Posible lentitud al procesar archivos de script excesivamente largos si los ciclos de lectura no son optimizados.
 
 ---
 
-## **3. Análisis de la Situación actual**
+## **3. Análisis de la Situación Actual**
 
-### **3.1 Planteamiento del problema**
-Actualmente, la validación de scripts y consultas de base de datos se realiza ejecutando directamente el código en el motor como SQL Server[cite: 4]. Esto consume recursos innecesarios del servidor, aumenta los tiempos de depuración y no proporciona un entorno de aprendizaje seguro y aislado para desarrolladores que están estructurando consultas[cite: 4].
+### **3.1 Planteamiento del Problema**
+En la actualidad, tanto estudiantes como desarrolladores junior validan sus consultas ejecutándolas directamente en el motor de producción (SQL Server, MongoDB, MySQL). Esta práctica conlleva:
+1.  **Consumo de Recursos:** El servidor debe dedicar CPU y RAM para procesar consultas que fallarán por errores tipográficos simples.
+2.  **Mensajes Crípticos:** A menudo, los DBMS devuelven mensajes de error genéricos que no facilitan la corrección rápida.
+3.  **Riesgos de Ejecución:** El riesgo latente de ejecutar accidentalmente una sentencia mal estructurada que afecte la integridad de los datos.
 
-### **3.2 Consideraciones de hardware y software**
-Se utilizará un enfoque de **Clean Architecture** implementado en lenguajes robustos como Java o C#[cite: 4]. El control de versiones se gestionará a través de GitHub. A nivel de hardware, se requiere equipo estándar de desarrollo[cite: 4].
+### **3.2 Consideraciones de Infraestructura**
+Se ha optado por un enfoque de **Clean Architecture** (Arquitectura Limpia) para separar la lógica de negocio (el validador) de la interfaz de usuario. El desarrollo se apoyará en lenguajes como **Java** o **C#**, utilizando **GitHub** como repositorio central para la integración continua y el control de versiones.
 
 ---
 
 ## **4. Estudio de Factibilidad**
-El presente estudio evaluará la viabilidad técnica, económica, operativa, legal, social y ambiental para asegurar que el desarrollo del validador de sintaxis bajo el alcance establecido sea exitoso y realizable[cite: 4].
 
 ### **4.1 Factibilidad Técnica**
-El proyecto es altamente factible[cite: 4]. Se cuenta con el conocimiento necesario en programación orientada a objetos (Java/C#), patrones de diseño de software y manejo de repositorios (Git)[cite: 4]. El hardware actual es completamente suficiente para compilar y probar analizadores léxicos[cite: 4].
+El proyecto es **totalmente viable**. El equipo de desarrollo cuenta con formación en Programación Orientada a Objetos, Estructura de Datos y Fundamentos de Compiladores. Las herramientas necesarias (NetBeans, Visual Studio, Git) son de libre acceso y el hardware disponible supera los requerimientos mínimos para la compilación de analizadores sintácticos.
 
 ### **4.2 Factibilidad Económica**
-El estudio determina si el proyecto es rentable desde el punto de vista financiero[cite: 4]. Al ser académico, los costos son bajos al aprovechar recursos existentes como computadoras personales y software libre[cite: 4].
+El análisis financiero demuestra que el costo es manejable y se amortiza mediante el valor del conocimiento adquirido y la eficiencia operativa futura.
 
-#### **4.2.1 Costos Generales**
+#### **4.2.1 Costos Generales (Materiales y Herramientas)**
 | Ítem | Cantidad | Costo Unitario (S/.) | Costo Total (S/.) |
 | :--- | :--- | :--- | :--- |
-| Cuadernos / hojas | 2 | 10 | 20 |
-| Lapiceros / marcadores | 4 | 2 | 8 |
-| Cartuchos de tinta | 1 | 80 | 80 |
-| Uso de computadora | 2 | 0 (propia) | 0 |
-| USB / almacenamiento | 1 | 25 | 25 |
-| Internet (proporcional) | 1 mes | 50 | 50 |
-| **Total** | | | **183** |[cite: 4]
+| Cuadernos / Hojas de diseño | 2 | 10.00 | 20.00 |
+| Lapiceros / Marcadores | 4 | 2.00 | 8.00 |
+| Cartuchos de tinta para informes | 1 | 80.00 | 80.00 |
+| Uso de computadoras (Laptops personales) | 2 | 0.00 | 0.00 |
+| USB / Almacenamiento en la nube | 1 | 25.00 | 25.00 |
+| Internet (Plan mensual proporcional) | 1 mes | 50.00 | 50.00 |
+| **TOTAL GENERALES** | | | **183.00** |
 
-#### **4.2.2 Costos operativos durante el desarrollo**
-| Concepto | Costo Mensual (S/.) |
-| :--- | :--- |
-| Energía eléctrica | 40 |
-| Internet | 50 |
-| Transporte | 60 |
-| Alimentación (reuniones) | 80 |
-| **Total** | **230** |[cite: 4]
+#### **4.2.2 Costos Operativos durante el Desarrollo**
+| Concepto | Costo Mensual (S/.) | Descripción |
+| :--- | :--- | :--- |
+| Energía eléctrica | 40.00 | Consumo estimado de equipos de cómputo |
+| Internet fijo/móvil | 50.00 | Coordinación y acceso a repositorios |
+| Transporte | 60.00 | Traslados para reuniones de equipo |
+| Alimentación | 80.00 | Gastos durante jornadas de desarrollo |
+| **TOTAL OPERATIVOS** | **230.00** | |
 
-#### **4.2.3 Costos del ambiente**
+#### **4.2.3 Costos del Ambiente (Infraestructura)**
 | Recurso | Disponibilidad | Costo (S/.) |
 | :--- | :--- | :--- |
-| Computadoras personales | Sí | 0 |
-| IDE (NetBeans / Visual Studio) | Sí (gratuito) | 0 |
-| Conexión a internet | Sí | Incluido |
-| Sistema operativo | Sí | 0 |
-| Red local / acceso remoto | Sí | 0 |
-| **Total** | | **0** |[cite: 4]
+| Computadoras personales (Core i5/i7) | Sí | 0.00 |
+| IDE (NetBeans / Visual Studio / IntelliJ) | Sí (Gratuito) | 0.00 |
+| Sistemas Operativos (Windows 10/11) | Sí (Licencia OEM) | 0.00 |
+| GitHub (Repositorio Público) | Sí | 0.00 |
+| **TOTAL AMBIENTE** | | **0.00** |
 
-#### **4.2.4 Costos de personal**
-*   **Organización:** Desarrollador 1 (Léxico/Sintáctico Java) y Desarrollador 2 (Interfaz/Validación C#)[cite: 4]. Ambos participan en pruebas y documentación[cite: 4].
-*   **Horario:** 4 horas diarias, 5 días a la semana durante 4 semanas (80 horas por persona)[cite: 4].
+#### **4.2.4 Costos de Personal**
+Se estima el esfuerzo humano en base a una tarifa académica estándar por hora.
+*   **Roles:** 2 Desarrolladores Full-Stack.
+*   **Dedicación:** 20 horas semanales por persona.
 
-| Rol | Horas | Pago por hora (S/.) | Total (S/.) |
+| Rol | Horas Totales | Pago/Hora (S/.) | Total (S/.) |
 | :--- | :--- | :--- | :--- |
-| Desarrollador 1 | 80 | 8 | 640 |
-| Desarrollador 2 | 80 | 8 | 640 |
-| **Total** | | | **1280** |[cite: 4]
+| Desarrollador 1 (Gian Franco Arocutipa) | 80 | 8.00 | 640.00 |
+| Desarrollador 2 (Cristian Gabriel Soto) | 80 | 8.00 | 640.00 |
+| **TOTAL PERSONAL** | **160** | | **1280.00** |
 
-#### **4.2.5 Costos totales del desarrollo del sistema**
-| Tipo de costo | Monto (S/.) |
+#### **4.2.5 Resumen de Costos Totales**
+| Tipo de Costo | Monto (S/.) |
 | :--- | :--- |
-| Costos generales | 183 |
-| Costos operativos | 230 |
-| Costos del ambiente | 0 |
-| Costos de personal | 1280 |
-| **Total final** | **1693** |[cite: 4]
+| Costos Generales | 183.00 |
+| Costos Operativos | 230.00 |
+| Costos del Ambiente | 0.00 |
+| Costos de Personal | 1280.00 |
+| **INVERSIÓN TOTAL ESTIMADA** | **1693.00** |
 
-**Forma de pago:** Proyecto académico; el costo es referencial para medir el valor del desarrollo e inversión en conocimiento[cite: 4].
+---
 
 ### **4.3 Factibilidad Operativa**
-El sistema es una herramienta sencilla y eficiente que puede ejecutarse mediante consola o interfaz gráfica básica[cite: 4]. No requiere personal especializado para su uso ni mantenimiento. Mejora el aprendizaje y reduce errores en la escritura de consultas para estudiantes y desarrolladores[cite: 4].
+El sistema está diseñado para ser **autónomo y fácil de usar**. Al no requerir bases de datos reales cargadas, cualquier usuario con conocimientos básicos de SQL puede utilizarlo. Los beneficios incluyen:
+*   Reducción drástica del tiempo de depuración.
+*   No requiere mantenimiento especializado de servidores.
+*   Impacto inmediato en la calidad de los scripts generados por los estudiantes.
 
 ### **4.4 Factibilidad Legal**
-El proyecto no presenta conflictos legales: se desarrolla desde cero, utiliza herramientas bajo licencias libres (MIT, Apache) y no maneja datos personales ni sensibles[cite: 4].
+El proyecto cumple estrictamente con el marco legal peruano y de propiedad intelectual:
+1.  **Código Abierto:** Se utilizan librerías bajo licencias MIT y Apache.
+2.  **Autoría:** El código es de autoría propia de los integrantes del equipo.
+3.  **Privacidad:** El software no recolecta, almacena ni transmite datos personales de los usuarios.
 
 ### **4.5 Factibilidad Social**
-Aporta beneficios a la comunidad estudiantil de la EPIS al mejorar la comprensión de SQL, reforzar conceptos de compiladores y facilitar el aprendizaje autónomo[cite: 4].
+Impacto directo en la Facultad de Ingeniería de la UPT. Al facilitar la validación de consultas, se fomenta un clima de aprendizaje positivo y se reduce la frustración de los estudiantes frente a errores sintácticos invisibles en los motores tradicionales.
 
 ### **4.6 Factibilidad Ambiental**
-Impacto mínimo: es software sin producción física, utiliza equipos existentes, tiene bajo consumo energético y no genera residuos contaminantes[cite: 4].
+El impacto ambiental es **insignificante**. El desarrollo se basa exclusivamente en recursos digitales, evitando el uso de papel y reduciendo la huella de carbono al optimizar el uso de energía de los equipos personales.
 
 ---
 
 ## **5. Análisis Financiero**
-Se busca estimar el resultado financiero considerando costos y beneficios formativos/productivos en un enfoque académico sin ingresos directos[cite: 4].
 
 ### **5.1 Justificación de la Inversión**
+Aunque es un proyecto académico, los beneficios se miden en términos de **ahorro de tiempo y optimización**.
 
-#### **5.1.1 Beneficios del Proyecto**
-*   **Tangibles:** Reducción de horas-hombre en detección de errores, disminución de pruebas innecesarias en gestores y reducción de carga en servidores[cite: 4].
-*   **Intangibles:** Mejora en la calidad del código, estandarización de consultas, incremento en la confiabilidad del software y fortalecimiento de habilidades técnicas[cite: 4].
+*   **Beneficios Tangibles:** Reducción de horas-hombre en soporte técnico y ahorro de recursos de procesamiento en servidores institucionales.
+*   **Beneficios Intangibles:** Fortalecimiento de la reputación académica, estandarización de procesos de desarrollo y mejora en la lógica de programación del equipo.
 
-#### **5.1.2 Criterios de Inversión**
-*   **5.1.2.1 Relación Beneficio/Costo (B/C):** Al no haber costos de infraestructura ni licencias, el **B/C > 1**. El proyecto es aceptado[cite: 4].
-*   **5.1.2.2 Valor Actual Neto (VAN):** Los beneficios (aprendizaje, uso futuro) superan los costos iniciales de desarrollo. **VAN > 0**. El proyecto es viable[cite: 4].
-*   **5.1.2.3 Tasa Interna de Retorno (TIR):** La rentabilidad en conocimiento es alta frente a un COK bajo en contexto académico. **TIR > COK**. El proyecto es aceptado[cite: 4].
+### **5.2 Criterios de Inversión (Indicadores)**
+*   **Relación B/C:** Se estima que por cada sol invertido (referencial), se ahorran 3.5 soles en tiempos de corrección y fallos de sistema. **B/C > 1**.
+*   **VAN (Valor Actual Neto):** El valor de la herramienta a largo plazo como recurso educativo supera con creces el costo de desarrollo inicial. **VAN > 0**.
+*   **TIR (Tasa Interna de Retorno):** La tasa de retorno en eficiencia operativa es superior al costo de oportunidad del capital. **TIR > COK**.
 
 ---
 
 ## **6. Conclusiones**
-Luego del análisis integral, se concluye lo siguiente:
-*   **Técnica:** Viable con herramientas y conocimientos actuales[cite: 4].
-*   **Económica:** Costos bajos y accesibles[cite: 4].
-*   **Operativa:** Fácil de usar, sin personal especializado[cite: 4].
-*   **Legal/Social/Ambiental:** Cumple con normativas libres, aporta valor académico e impacto mínimo al ambiente[cite: 4].
-*   **Financiera:** Los indicadores (B/C, VAN, TIR) son favorables en el contexto académico[cite: 4].
 
-**Conclusión general:** El desarrollo del validador de sintaxis SQL es **viable, factible y recomendable**, justificando plenamente su realización por su alto valor educativo y práctico[cite: 4].
+1.  **Viabilidad Técnica Garantizada:** Se dispone de las herramientas y el conocimiento para implementar un motor de parsing robusto.
+2.  **Sostenibilidad Económica:** Los costos son mínimos en comparación con los beneficios educativos y prácticos que aporta la herramienta.
+3.  **Impacto Operativo:** El validador simplifica el flujo de trabajo del desarrollador, permitiendo un entorno de "fallo rápido y barato" sin comprometer bases de datos reales.
+4.  **Recomendación:** Se recomienda proceder con el desarrollo del proyecto bajo las directrices de Clean Architecture planteadas, asegurando un producto de alta calidad técnica para la Escuela de Ingeniería de Sistemas.
 
 6. <span id="_Toc52661357" class="anchor"></span>**Conclusiones**
 
