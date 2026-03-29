@@ -30,7 +30,7 @@ Integrantes:
 </center>
 <div style="page-break-after: always; visibility: hidden">\pagebreak</div>
 
-Sistema *{Nombre del Sistema}*
+Sistema Validador de sintaxis SQL u otra
 
 Informe de Factibilidad
 
@@ -78,11 +78,15 @@ Versión *{1.0}*
 
     1.1. Nombre del proyecto
 
+        Validador de Sintaxis SQL u otra.
+
     1.2. Duración del proyecto
+
+        1 mes
 
     1.3. Descripción
 
-        En que consiste el proyecto/importancia del mismo, contexto en que se va desenvolver
+        El proyecto consiste en el desarrollo de una herramienta de software a nivel local que permite realizar el análisis léxico y sintáctico de consultas para bases de datos relacionales (SQL) y documentales (NoSQL/JSON). Se desenvuelve en un contexto académico y de desarrollo de software, sirviendo como un entorno de pruebas preliminar y ligero para evitar errores de sintaxis antes de la ejecución en motores de bases de datos reales.
 
     1.4. Objetivos
 
