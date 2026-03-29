@@ -86,19 +86,24 @@ Versión *{1.0}*
 
     1.3. Descripción
 
-        El proyecto consiste en el desarrollo de una herramienta de software a nivel local que permite realizar el análisis léxico y sintáctico de consultas para bases de datos relacionales (SQL) y documentales (NoSQL/JSON). Se desenvuelve en un contexto académico y de desarrollo de software, sirviendo como un entorno de pruebas preliminar y ligero para evitar errores de sintaxis antes de la ejecución en motores de bases de datos reales.
+        El proyecto consiste en el desarrollo de una herramienta de software a nivel local que permite realizar el análisis léxico y sintáctico de consultas para bases de datos relacionales (SQL) y documentales                  (NoSQL/JSON). Se desenvuelve en un contexto académico y de desarrollo de software, sirviendo como un entorno de pruebas preliminar y ligero para evitar errores de sintaxis antes de la ejecución en motores de             bases de datos reales.
 
     1.4. Objetivos
 
         1.4.1 Objetivo general
+           Desarrollar un software eficiente que valide la estructura gramatical básica de sentencias SQL y comandos NoSQL sin necesidad de conexión a un servidor de base de datos.
         1.4.2 Objetivos Específicos
-            Para cada objetivo específico se indicara que se va a lograr
+            •	Implementar un analizador léxico (Lexer) capaz de reconocer tokens, palabras reservadas y operadores básicos de manera optimizada.
+            •	Construir un Parser para validar reglas gramaticales estrictas y de nivel único para estructuras relacionales (SELECT, INNER JOIN simple) y comandos NoSQL (find()).Implementar un analizador léxico (Lexer) capaz de reconocer tokens, palabras reservadas y operadores básicos de manera optimizada.
+            •	Desarrollar un sistema de reporte que indique la línea exacta y el token donde ocurre un error sintáctico.
 
 <div style="page-break-after: always; visibility: hidden">\pagebreak</div>
 
 2. <span id="_Toc52661347" class="anchor"></span>**Riesgos**
 
-    Señale los riesgos que pudieran afectar el éxito del proyecto.}*
+        •	Desarrollar un sistema de reporte que indique la línea exacta y el token donde ocurre un error sintáctico.
+        •	Limitaciones de rendimiento si no se gestionan correctamente los ciclos de lectura de cadenas de texto muy largas.
+        •	Curva de aprendizaje en la implementación de algoritmos de parsing manual.
 
 <div style="page-break-after: always; visibility: hidden">\pagebreak</div>
 
@@ -106,39 +111,34 @@ Versión *{1.0}*
 
     3.1. Planteamiento del problema
 
-            Describa antecedentes y situación actual, explicando la problemática y/o necesidad que será resuelta con el proyecto propuesto.
+            Actualmente, la validación de scripts y consultas de base de datos se realiza ejecutando directamente el código en el motor como SQL Server. Esto consume recursos innecesarios del servidor, aumenta los tiempos de depuración y no proporciona un entorno de aprendizaje seguro y aislado para desarrolladores que están estructurando consultas.
 
     3.2. Consideraciones de hardware y software
 
-            Hardware y software posibles para la implementación, se analizara lo que existe y es alcanzable, se evaluara que tecnología se puede > utilizar en el proyecto.
+            Se utilizará un enfoque de Clean Architecture implementado en lenguajes robustos como Java o C#. El control de versiones se gestionará a través de GitHub. A nivel de hardware, se requiere equipo estándar de desarrollo.
 
 <div style="page-break-after: always; visibility: hidden">\pagebreak</div>
 
 4. <span id="_Toc52661349" class="anchor"></span>**Estudio de
     Factibilidad**
 
-    Describir los resultados que esperan alcanzar del estudio de factibilidad, las actividades que se realizaron para preparar la evaluación de factibilidad y por quien fue aprobado.
+    El presente estudio evaluará la viabilidad técnica, económica, operativa, legal, social y ambiental para asegurar que el desarrollo del validador de sintaxis bajo el alcance establecido sea exitoso y realizable.
 
     4.1. <span id="_Toc52661350" class="anchor"></span>Factibilidad Técnica
 
-        El estudio de viabilidad técnica se enfoca en obtener un entendimiento de los recursos tecnológicos disponibles actualmente y su aplicabilidad a las necesidades que se espera tenga el proyecto. En el caso de tecnología informática esto implica una evaluación del hardware y software y como este puede cubrir las necesidades del sistema propuesto.
-
-        Realizar una evaluación de la tecnología actual existente y la posibilidad de utilizarla en el desarrollo e implantación del sistema.*
-
-        Describir acerca del hardware (equipos, servidor), software (aplicaciones, navegadores, sistemas operativos, dominio, internet, infraestructura de red física, etc.
+        El proyecto es altamente factible. Se cuenta con el conocimiento necesario en programación orientada a objetos (Java/C#), patrones de diseño de software y manejo de repositorios (Git). El hardware actual es completamente suficiente para compilar y probar analizadores léxicos
 
     4.2. <span id="_Toc52661351" class="anchor"></span>Factibilidad Económica
 
-        El propósito del estudio de viabilidad económica, es determinar los beneficios económicos del proyecto o sistema propuesto para la organización, en contraposición con los costos.
-        Como se mencionó anteriormente en el estudio de factibilidad técnica wvaluar si la institución (departamento de TI) cuenta con las herramientas necesarias para la implantación del sistema y evaluar si la propuesta requiere o no de una inversión inicial en infraestructura informática.
-        Se plantearán los costos del proyecto.
-        Costeo del Proyecto: Consiste en estimar los costos de los recursos Humanos, materiales o consumibles y/o máquinas) directos para completar las actividades del proyecto}.*
+        El estudio de viabilidad económica tiene como objetivo determinar si el proyecto del validador de sintaxis SQL es rentable y viable desde el punto de vista financiero. En este caso, al tratarse de un proyecto académico desarrollado por dos integrantes, los costos son relativamente bajos, ya que se aprovechan recursos existentes como computadoras personales y software libre.
+        Se evaluarán los costos asociados al desarrollo considerando recursos humanos, materiales y operativos necesarios para completar el proyecto.
 
         Definir los siguientes costos:
 
         4.2.1. Costos Generales
 
-                Los costos generales son todos los gastos realizados en accesorios y material de oficina y de uso diario, necesarios para los procesos, tales como, papeles, plumas, cartuchos de impresora, marcadores, computadora etc. Colocar tabla de costos.
+                Los costos generales corresponden a materiales de oficina y herramientas básicas necesarias para el desarrollo del proyecto.
+
 
         4.2.2. Costos operativos durante el desarrollo 
         
