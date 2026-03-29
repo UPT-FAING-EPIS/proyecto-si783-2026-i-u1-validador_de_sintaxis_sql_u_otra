@@ -28,207 +28,172 @@ Integrantes:
 **  
 **
 </center>
-<div style="page-break-after: always; visibility: hidden">\pagebreak</div>
 
-Sistema Validador de sintaxis SQL u otra
+---
 
-Informe de Factibilidad
+**Sistema Validador de sintaxis SQL u otra**  
+**Informe de Factibilidad**  
+**Versión:** *{1.0}*[cite: 4]
 
-Versión *{1.0}*
+### **CONTROL DE VERSIONES**
+| Versión | Hecha por | Revisada por | Aprobada por | Fecha | Motivo |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| 1.0 | MPV | ELV | ARV | 10/10/2020 | Versión Original[cite: 4] |
 
-|CONTROL DE VERSIONES||||||
-| :-: | :- | :- | :- | :- | :- |
-|Versión|Hecha por|Revisada por|Aprobada por|Fecha|Motivo|
-|1\.0|MPV|ELV|ARV|10/10/2020|Versión Original|
-
-<div style="page-break-after: always; visibility: hidden">\pagebreak</div>
+---
 
 # **INDICE GENERAL**
+1. [Descripción del Proyecto](#1-descripción-del-proyecto)
+2. [Riesgos](#2-riesgos)
+3. [Análisis de la Situación actual](#3-análisis-de-la-situación-actual)
+4. [Estudio de Factibilidad](#4-estudio-de-factibilidad)
+    - 4.1 [Factibilidad Técnica](#41-factibilidad-técnica)
+    - 4.2 [Factibilidad Económica](#42-factibilidad-económica)
+    - 4.3 [Factibilidad Operativa](#43-factibilidad-operativa)
+    - 4.4 [Factibilidad Legal](#44-factibilidad-legal)
+    - 4.5 [Factibilidad Social](#45-factibilidad-social)
+    - 4.6 [Factibilidad Ambiental](#46-factibilidad-ambiental)
+5. [Análisis Financiero](#5-análisis-financiero)
+6. [Conclusiones](#6-conclusiones)
+
+---
+
+## **1. Descripción del Proyecto**
+
+### **1.1 Nombre del proyecto**
+Validador de Sintaxis SQL u otra[cite: 4].
+
+### **1.2 Duración del proyecto**
+1 mes[cite: 4].
+
+### **1.3 Descripción**
+El proyecto consiste en el desarrollo de una herramienta de software a nivel local que permite realizar el análisis léxico y sintáctico de consultas para bases de datos relacionales (SQL) y documentales (NoSQL/JSON)[cite: 4]. Se desenvuelve en un contexto académico y de desarrollo de software, sirviendo como un entorno de pruebas preliminar y ligero para evitar errores de sintaxis antes de la ejecución en motores de bases de datos reales[cite: 4].
+
+### **1.4 Objetivos**
+*   **1.4.1 Objetivo general:** Desarrollar un software eficiente que valide la estructura gramatical básica de sentencias SQL y comandos NoSQL sin necesidad de conexión a un servidor de base de datos[cite: 4].
+*   **1.4.2 Objetivos Específicos:**
+    *   Implementar un analizador léxico (Lexer) capaz de reconocer tokens, palabras reservadas y operadores básicos de manera optimizada[cite: 4].
+    *   Construir un Parser para validar reglas gramaticales estrictas y de nivel único para estructuras relacionales (SELECT, INNER JOIN simple) y comandos NoSQL (find())[cite: 4].
+    *   Desarrollar un sistema de reporte que indique la línea exacta y el token donde ocurre un error sintáctico[cite: 4].
+
+---
+
+## **2. Riesgos**
+*   **Desviación del alcance:** Intentar incorporar reglas gramaticales anidadas o complejas que excedan el tiempo planificado[cite: 4].
+*   **Limitaciones de rendimiento:** Si no se gestionan correctamente los ciclos de lectura de cadenas de texto muy largas[cite: 4].
+*   **Curva de aprendizaje:** En la implementación de algoritmos de parsing manual[cite: 4].
+
+---
+
+## **3. Análisis de la Situación actual**
+
+### **3.1 Planteamiento del problema**
+Actualmente, la validación de scripts y consultas de base de datos se realiza ejecutando directamente el código en el motor como SQL Server[cite: 4]. Esto consume recursos innecesarios del servidor, aumenta los tiempos de depuración y no proporciona un entorno de aprendizaje seguro y aislado para desarrolladores que están estructurando consultas[cite: 4].
+
+### **3.2 Consideraciones de hardware y software**
+Se utilizará un enfoque de **Clean Architecture** implementado en lenguajes robustos como Java o C#[cite: 4]. El control de versiones se gestionará a través de GitHub. A nivel de hardware, se requiere equipo estándar de desarrollo[cite: 4].
+
+---
+
+## **4. Estudio de Factibilidad**
+El presente estudio evaluará la viabilidad técnica, económica, operativa, legal, social y ambiental para asegurar que el desarrollo del validador de sintaxis bajo el alcance establecido sea exitoso y realizable[cite: 4].
+
+### **4.1 Factibilidad Técnica**
+El proyecto es altamente factible[cite: 4]. Se cuenta con el conocimiento necesario en programación orientada a objetos (Java/C#), patrones de diseño de software y manejo de repositorios (Git)[cite: 4]. El hardware actual es completamente suficiente para compilar y probar analizadores léxicos[cite: 4].
+
+### **4.2 Factibilidad Económica**
+El estudio determina si el proyecto es rentable desde el punto de vista financiero[cite: 4]. Al ser académico, los costos son bajos al aprovechar recursos existentes como computadoras personales y software libre[cite: 4].
+
+#### **4.2.1 Costos Generales**
+| Ítem | Cantidad | Costo Unitario (S/.) | Costo Total (S/.) |
+| :--- | :--- | :--- | :--- |
+| Cuadernos / hojas | 2 | 10 | 20 |
+| Lapiceros / marcadores | 4 | 2 | 8 |
+| Cartuchos de tinta | 1 | 80 | 80 |
+| Uso de computadora | 2 | 0 (propia) | 0 |
+| USB / almacenamiento | 1 | 25 | 25 |
+| Internet (proporcional) | 1 mes | 50 | 50 |
+| **Total** | | | **183** |[cite: 4]
+
+#### **4.2.2 Costos operativos durante el desarrollo**
+| Concepto | Costo Mensual (S/.) |
+| :--- | :--- |
+| Energía eléctrica | 40 |
+| Internet | 50 |
+| Transporte | 60 |
+| Alimentación (reuniones) | 80 |
+| **Total** | **230** |[cite: 4]
+
+#### **4.2.3 Costos del ambiente**
+| Recurso | Disponibilidad | Costo (S/.) |
+| :--- | :--- | :--- |
+| Computadoras personales | Sí | 0 |
+| IDE (NetBeans / Visual Studio) | Sí (gratuito) | 0 |
+| Conexión a internet | Sí | Incluido |
+| Sistema operativo | Sí | 0 |
+| Red local / acceso remoto | Sí | 0 |
+| **Total** | | **0** |[cite: 4]
+
+#### **4.2.4 Costos de personal**
+*   **Organización:** Desarrollador 1 (Léxico/Sintáctico Java) y Desarrollador 2 (Interfaz/Validación C#)[cite: 4]. Ambos participan en pruebas y documentación[cite: 4].
+*   **Horario:** 4 horas diarias, 5 días a la semana durante 4 semanas (80 horas por persona)[cite: 4].
+
+| Rol | Horas | Pago por hora (S/.) | Total (S/.) |
+| :--- | :--- | :--- | :--- |
+| Desarrollador 1 | 80 | 8 | 640 |
+| Desarrollador 2 | 80 | 8 | 640 |
+| **Total** | | | **1280** |[cite: 4]
+
+#### **4.2.5 Costos totales del desarrollo del sistema**
+| Tipo de costo | Monto (S/.) |
+| :--- | :--- |
+| Costos generales | 183 |
+| Costos operativos | 230 |
+| Costos del ambiente | 0 |
+| Costos de personal | 1280 |
+| **Total final** | **1693** |[cite: 4]
 
-[1. Descripción del Proyecto](#_Toc52661346)
+**Forma de pago:** Proyecto académico; el costo es referencial para medir el valor del desarrollo e inversión en conocimiento[cite: 4].
 
-[2. Riesgos](#_Toc52661347)
+### **4.3 Factibilidad Operativa**
+El sistema es una herramienta sencilla y eficiente que puede ejecutarse mediante consola o interfaz gráfica básica[cite: 4]. No requiere personal especializado para su uso ni mantenimiento. Mejora el aprendizaje y reduce errores en la escritura de consultas para estudiantes y desarrolladores[cite: 4].
 
-[3. Análisis de la Situación actual](#_Toc52661348)
+### **4.4 Factibilidad Legal**
+El proyecto no presenta conflictos legales: se desarrolla desde cero, utiliza herramientas bajo licencias libres (MIT, Apache) y no maneja datos personales ni sensibles[cite: 4].
 
-[4. Estudio de Factibilidad](#_Toc52661349)
+### **4.5 Factibilidad Social**
+Aporta beneficios a la comunidad estudiantil de la EPIS al mejorar la comprensión de SQL, reforzar conceptos de compiladores y facilitar el aprendizaje autónomo[cite: 4].
 
-[4.1 Factibilidad Técnica](#_Toc52661350)
+### **4.6 Factibilidad Ambiental**
+Impacto mínimo: es software sin producción física, utiliza equipos existentes, tiene bajo consumo energético y no genera residuos contaminantes[cite: 4].
 
-[4.2 Factibilidad económica](#_Toc52661351)
+---
 
-[4.3 Factibilidad Operativa](#_Toc52661352)
+## **5. Análisis Financiero**
+Se busca estimar el resultado financiero considerando costos y beneficios formativos/productivos en un enfoque académico sin ingresos directos[cite: 4].
 
-[4.4 Factibilidad Legal](#_Toc52661353)
+### **5.1 Justificación de la Inversión**
 
-[4.5 Factibilidad Social](#_Toc52661354)
+#### **5.1.1 Beneficios del Proyecto**
+*   **Tangibles:** Reducción de horas-hombre en detección de errores, disminución de pruebas innecesarias en gestores y reducción de carga en servidores[cite: 4].
+*   **Intangibles:** Mejora en la calidad del código, estandarización de consultas, incremento en la confiabilidad del software y fortalecimiento de habilidades técnicas[cite: 4].
 
-[4.6 Factibilidad Ambiental](#_Toc52661355)
+#### **5.1.2 Criterios de Inversión**
+*   **5.1.2.1 Relación Beneficio/Costo (B/C):** Al no haber costos de infraestructura ni licencias, el **B/C > 1**. El proyecto es aceptado[cite: 4].
+*   **5.1.2.2 Valor Actual Neto (VAN):** Los beneficios (aprendizaje, uso futuro) superan los costos iniciales de desarrollo. **VAN > 0**. El proyecto es viable[cite: 4].
+*   **5.1.2.3 Tasa Interna de Retorno (TIR):** La rentabilidad en conocimiento es alta frente a un COK bajo en contexto académico. **TIR > COK**. El proyecto es aceptado[cite: 4].
 
-[5. Análisis Financiero](#_Toc52661356)
+---
 
-[6. Conclusiones](#_Toc52661357)
+## **6. Conclusiones**
+Luego del análisis integral, se concluye lo siguiente:
+*   **Técnica:** Viable con herramientas y conocimientos actuales[cite: 4].
+*   **Económica:** Costos bajos y accesibles[cite: 4].
+*   **Operativa:** Fácil de usar, sin personal especializado[cite: 4].
+*   **Legal/Social/Ambiental:** Cumple con normativas libres, aporta valor académico e impacto mínimo al ambiente[cite: 4].
+*   **Financiera:** Los indicadores (B/C, VAN, TIR) son favorables en el contexto académico[cite: 4].
 
-
-<div style="page-break-after: always; visibility: hidden">\pagebreak</div>
-
-**<u>Informe de Factibilidad</u>**
-
-1. <span id="_Toc52661346" class="anchor"></span>**Descripción del Proyecto**
-
-    1.1. Nombre del proyecto
-
-        Validador de Sintaxis SQL u otra.
-
-    1.2. Duración del proyecto
-
-        1 mes
-
-    1.3. Descripción
-
-        El proyecto consiste en el desarrollo de una herramienta de software a nivel local que permite realizar el análisis léxico y sintáctico de consultas para bases de datos relacionales (SQL) y documentales                  (NoSQL/JSON). Se desenvuelve en un contexto académico y de desarrollo de software, sirviendo como un entorno de pruebas preliminar y ligero para evitar errores de sintaxis antes de la ejecución en motores de             bases de datos reales.
-
-    1.4. Objetivos
-
-        1.4.1 Objetivo general
-           Desarrollar un software eficiente que valide la estructura gramatical básica de sentencias SQL y comandos NoSQL sin necesidad de conexión a un servidor de base de datos.
-        1.4.2 Objetivos Específicos
-            •	Implementar un analizador léxico (Lexer) capaz de reconocer tokens, palabras reservadas y operadores básicos de manera optimizada.
-            •	Construir un Parser para validar reglas gramaticales estrictas y de nivel único para estructuras relacionales (SELECT, INNER JOIN simple) y comandos NoSQL (find()).Implementar un analizador léxico (Lexer) capaz de reconocer tokens, palabras reservadas y operadores básicos de manera optimizada.
-            •	Desarrollar un sistema de reporte que indique la línea exacta y el token donde ocurre un error sintáctico.
-
-<div style="page-break-after: always; visibility: hidden">\pagebreak</div>
-
-2. <span id="_Toc52661347" class="anchor"></span>**Riesgos**
-
-        •	Desarrollar un sistema de reporte que indique la línea exacta y el token donde ocurre un error sintáctico.
-        •	Limitaciones de rendimiento si no se gestionan correctamente los ciclos de lectura de cadenas de texto muy largas.
-        •	Curva de aprendizaje en la implementación de algoritmos de parsing manual.
-
-<div style="page-break-after: always; visibility: hidden">\pagebreak</div>
-
-3. <span id="_Toc52661348" class="anchor"></span>**Análisis de la Situación actual**
-
-    3.1. Planteamiento del problema
-
-            Actualmente, la validación de scripts y consultas de base de datos se realiza ejecutando directamente el código en el motor como SQL Server. Esto consume recursos innecesarios del servidor, aumenta los tiempos de depuración y no proporciona un entorno de aprendizaje seguro y aislado para desarrolladores que están estructurando consultas.
-
-    3.2. Consideraciones de hardware y software
-
-            Se utilizará un enfoque de Clean Architecture implementado en lenguajes robustos como Java o C#. El control de versiones se gestionará a través de GitHub. A nivel de hardware, se requiere equipo estándar de desarrollo.
-
-<div style="page-break-after: always; visibility: hidden">\pagebreak</div>
-
-4. <span id="_Toc52661349" class="anchor"></span>**Estudio de
-    Factibilidad**
-
-    El presente estudio evaluará la viabilidad técnica, económica, operativa, legal, social y ambiental para asegurar que el desarrollo del validador de sintaxis bajo el alcance establecido sea exitoso y realizable.
-
-    4.1. <span id="_Toc52661350" class="anchor"></span>Factibilidad Técnica
-
-        El proyecto es altamente factible. Se cuenta con el conocimiento necesario en programación orientada a objetos (Java/C#), patrones de diseño de software y manejo de repositorios (Git). El hardware actual es completamente suficiente para compilar y probar analizadores léxicos
-
-    4.2. <span id="_Toc52661351" class="anchor"></span>Factibilidad Económica
-
-        El estudio de viabilidad económica tiene como objetivo determinar si el proyecto del validador de sintaxis SQL es rentable y viable desde el punto de vista financiero. En este caso, al tratarse de un proyecto académico desarrollado por dos integrantes, los costos son relativamente bajos, ya que se aprovechan recursos existentes como computadoras personales y software libre.
-        Se evaluarán los costos asociados al desarrollo considerando recursos humanos, materiales y operativos necesarios para completar el proyecto.
-
-        Definir los siguientes costos:
-
-        4.2.1. Costos Generales
-
-                Los costos generales corresponden a materiales de oficina y herramientas básicas necesarias para el desarrollo del proyecto.
-
-
-        4.2.2. Costos operativos durante el desarrollo 
-        
-                Evaluar costos necesarios para la operatividad de las actividades de la empresa durante el periodo en el que se realizara el proyecto. Los costos de operación pueden ser renta de oficina, agua, luz, teléfono, etc.
-
-        4.2.3. Costos del ambiente
-
-                Evaluar si se cuenta con los requerimientos técnicos para la implantación del software como el dominio, infraestructura de red, acceso a internet, etc.
-
-        4.2.4. Costos de personal
-
-                Aquí se incluyen los gastos generados por el recurso humano que se necesita para el desarrollo del sistema únicamente.
-
-                No se considerará personal para la operación y funcionamiento del sistema.
-
-                Incluir tabla que muestra los gastos correspondientes al personal.
-
-                Indicar organización y roles. Indicar horario de trabajo del personal.
-
-        4.2.5.  Costos totales del desarrollo del sistema
-
-                {Totalizar costos y realizar resumen de costo final del proyecto y la forma de pago.
-
-    4.3. <span id="_Toc52661352" class="anchor"></span>Factibilidad Operativa
-
-        Describir los beneficios del producto y si se tiene la capacidad por parte del cliente para mantener el sistema funcionando y garantizar el buen funcionamiento y su impacto en los usuarios. Lista de interesados.
-
-    4.4. <span id="_Toc52661353" class="anchor"></span>Factibilidad Legal
-
-        Determinar si existe conflicto del proyecto con restricciones legales como leyes y regulaciones del país o locales relacionadas con seguridad, protección de datos, conducta de negocio, empleo y adquisiciones.
-
-    4.5. <span id="_Toc52661354" class="anchor"></span>Factibilidad Social 
-
-        Evaluar influencias y asuntos de índole social y cultural como el clima político, códigos de conducta y ética*
-
-    4.6. <span id="_Toc52661355" class="anchor"></span>Factibilidad Ambiental
-
-        Evaluar influencias y asuntos de índole ambiental como el impacto y repercusión en el medio ambiente.
-
-<div style="page-break-after: always; visibility: hidden">\pagebreak</div>
-
-5. <span id="_Toc52661356" class="anchor"></span>**Análisis Financiero**
-
-    El plan financiero se ocupa del análisis de ingresos y gastos asociados a cada proyecto, desde el punto de vista del instante temporal en que se producen. Su misión fundamental es detectar situaciones financieramente inadecuadas.
-    Se tiene que estimar financieramente el resultado del proyecto.
-
-    5.1. Justificación de la Inversión
-
-        5.1.1. Beneficios del Proyecto
-
-            El beneficio se calcula como el margen económico menos los costes de oportunidad, que son los márgenes que hubieran podido obtenerse de haber dedicado el capital y el esfuerzo a otras actividades.
-            El beneficio, obtenido lícitamente, no es sólo una recompensa a la inversión, al esfuerzo y al riesgo asumidos por el empresario, sino que también es un factor esencial para que las empresas sigan en el  mercado e incorporen nuevas inversiones al tejido industrial y social de las naciones.
-            Describir beneficios tangibles e intangibles*
-            Beneficios tangibles: son de fácil cuantificación, generalmente están relacionados con la reducción de recursos o talento humano.
-            Beneficios intangibles: no son fácilmente cuantificables y están relacionados con elementos o mejora en otros procesos de la organización.
->
-            Ejemplo de beneficios:
-
-            - Mejoras en la eficiencia del área bajo estudio.
-            - Reducción de personal.
-            - Reducción de futuras inversiones y costos.
-            - Disponibilidad del recurso humano.
-            - Mejoras en planeación, control y uso de recursos.
-            - Suministro oportuno de insumos para las operaciones.
-            - Cumplimiento de requerimientos gubernamentales.
-            - Toma acertada de decisiones.
-            - Disponibilidad de información apropiada.
-            - Aumento en la confiabilidad de la información.
-            - Mejor servicio al cliente externo e interno
-            - Logro de ventajas competitivas.
-            - Valor agregado a un producto de la compañía.
-        
-        5.1.2. Criterios de Inversión
-
-            5.1.2.1. Relación Beneficio/Costo (B/C)
-
-                En base a los costos y beneficios identificados se evalúa si es factible el desarrollo del proyecto. 
-                Si se presentan varias alternativas de solución se evaluará cada una de ellas para determinar la mejor solución desde el punto de vista del > retorno de la inversión
-                El B/C si es mayor a uno, se acepta el proyecto; si el B/C es igual a uno es indiferente aceptar o rechazar el proyecto y si el B/C es menor a uno se rechaza el proyecto
-
-            5.1.2.2. Valor Actual Neto (VAN)
-            
-                Valor actual de los beneficios netos que genera el proyecto. Si el VAN es mayor que cero, se acepta el proyecto; si el VAN es igual a cero es indiferente aceptar o rechazar el proyecto y si el VAN es menor que cero se rechaza el proyecto
-
-            5.1.2.3 Tasa Interna de Retorno (TIR)*
-                Es la tasa porcentual que indica la rentabilidad promedio anual que genera el capital invertido en el proyecto. Si la TIR es mayor que el costo de oportunidad se acepta el proyecto, si la TIR es igual al costo de oportunidad es indiferente aceptar o rechazar el proyecto, si la TIR es menor que el costo de oportunidad se rechaza el proyecto
-
-                Costo de oportunidad de capital (COK) es la tasa de interés que podría haber obtenido con el dinero invertido en el proyecto
-
-<div style="page-break-after: always; visibility: hidden">\pagebreak</div>
+**Conclusión general:** El desarrollo del validador de sintaxis SQL es **viable, factible y recomendable**, justificando plenamente su realización por su alto valor educativo y práctico[cite: 4].
 
 6. <span id="_Toc52661357" class="anchor"></span>**Conclusiones**
 
