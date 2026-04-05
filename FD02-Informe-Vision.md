@@ -176,21 +176,40 @@ e) Estandaraes de calidad y seguridad	](#_toc394513800)42
        El sistema no ejecutará consultas ni modificará bases de datos reales; su función será exclusivamente de validación.
 
     1.3	Definiciones, Siglas y Abreviaturas
-           SQL (Structured Query Language): Lenguaje para gestionar bases de datos relacionales.
-        NoSQL (Not Only SQL): Conjunto de tecnologías de bases de datos no relacionales.
-        DML (Data Manipulation Language): Lenguaje de manipulación de datos (SELECT, INSERT, UPDATE, DELETE).
-        JSON (JavaScript Object Notation): Formato ligero de intercambio de datos usado en NoSQL.
-        MongoDB: Sistema de base de datos NoSQL orientado a documentos.
-        Token: Unidad mínima en el análisis léxico.
-        Análisis Léxico: Identificación de tokens dentro de una cadena.
-        Análisis Sintáctico: Verificación de la estructura según reglas gramaticales.
-        Parser: Componente que analiza la sintaxis.
-        Validador: Sistema que verifica la corrección de una entrada.
+        |CONTROL DE VERSIONES||||||
+        | :-: | :- |
+        |**Término**|**Definición**|
+        |**SQL**|(Structured Query Language) Lenguaje para gestionar bases de datos relacionales.|
+        |**NoSQL**|(Not Only SQL) Conjunto de tecnologías de bases de datos no relacionales.|
+        |**DML**|(Data Manipulation Language) Lenguaje de manipulación de datos (SELECT, INSERT, UPDATE, DELETE).|
+        |**JSON**|(JavaScript Object Notation) Formato ligero de intercambio de datos usado en NoSQL.|
+        |**MongoDB**|Sistema de base de datos NoSQL orientado a documentos.|
+        |**Token**|Unidad mínima en el análisis léxico.|
+        |**Análisis Léxico**|Identificación de tokens dentro de una cadena.|
+        |**Análisis Sintáctico**|Verificación de la estructura según reglas gramaticales.|
+        |**Parser**|Componente que analiza la sintaxis.|
+        |**Validador**|Sistema que verifica la corrección de una entrada.|
 
     1.4	Referencias
-
+        - Informe de Factibilidad del Proyecto (FD01).
+        - Repositorio del proyecto en GitHub (gestión de tareas).
+        - Documentación oficial de SQL (ANSI SQL).
+        - Documentación de MongoDB (NoSQL).
+        - Documentación oficial de Java y C#.
+        - Material académico de cursos de Base de Datos y Compiladores.
     1.5	Visión General
-
+        El Sistema Validador de Sintaxis SQL y NoSQL se plantea como una herramienta integral que permite validar consultas y         estructuras de datos en diferentes paradigmas de bases de datos, contribuyendo a mejorar la calidad del software y            reducir errores comunes en el desarrollo.
+        
+        El sistema se desarrollará utilizando Java y C#, aprovechando recursos de software libre y sin depender directamente          de motores de bases de datos para su funcionamiento, lo que garantiza portabilidad y facilidad de uso.
+        
+        Además, el sistema está diseñado con una visión escalable, permitiendo futuras mejoras como:
+        
+            - Soporte para más motores NoSQL.
+            - Integración con entornos de desarrollo (IDE).
+            - Validación semántica más avanzada.
+            - Extensión a otros lenguajes de consulta.
+        
+        De esta manera, el proyecto no solo cumple un propósito académico, sino que también sienta bases para el desarrollo           de herramientas más complejas en el ámbito profesional.
 <div style="page-break-after: always; visibility: hidden">\pagebreak</div>
 
 2. <span id="_Toc52661347" class="anchor"></span>**Posicionamiento**
