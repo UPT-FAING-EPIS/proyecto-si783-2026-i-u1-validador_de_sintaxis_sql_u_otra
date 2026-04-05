@@ -142,53 +142,55 @@ e) Estandaraes de calidad y seguridad	](#_toc394513800)42
 
 1. <span id="_Toc52661346" class="anchor"></span>**Introducción**
 
-    1.1	Propósito
+**1.1	Propósito**
    
 El presente documento tiene como propósito definir la visión, objetivos y lineamientos generales para el desarrollo de        un Sistema Validador de Sintaxis para Bases de Datos SQL y NoSQL, orientado a verificar la correcta estructura de             consultas antes de su ejecución.       
+
 El sistema permitirá a estudiantes y desarrolladores identificar errores sintácticos de manera anticipada, reduciendo         fallos en tiempo de ejecución y mejorando la calidad del desarrollo de software. Además, busca fortalecer                     conocimientos en áreas como análisis léxico, análisis sintáctico y procesamiento de lenguajes, utilizando tecnologías         como Java y C#.
+
 Asimismo, el proyecto responde a la necesidad actual de trabajar tanto con bases de datos relacionales como no                relacionales, integrando validaciones para ambos paradigmas.
    
-    1.2	Alcance
-       El sistema estará enfocado en la validación de estructuras y consultas en dos tipos de bases de datos:
+**1.2	Alcance**
+El sistema estará enfocado en la validación de estructuras y consultas en dos tipos de bases de datos:
     
-       **Bases de Datos Relacionales (SQL)**
-            Sentencias SELECT
-            Sentencias INSERT
-            Sentencias UPDATE
-            Sentencias DELETE
+**Bases de Datos Relacionales (SQL)**
+    Sentencias SELECT
+    Sentencias INSERT
+    Sentencias UPDATE
+    Sentencias DELETE
    
-       **Bases de Datos No Relacionales (NoSQL)**
-            Validación de estructuras tipo JSON
-            Consultas básicas en motores como:
-            MongoDB (find, insert, update, delete)
-            Validación de formato y estructura de documentos
+**Bases de Datos No Relacionales (NoSQL)**
+    Validación de estructuras tipo JSON
+    Consultas básicas en motores como:
+        MongoDB (find, insert, update, delete)
+    Validación de formato y estructura de documentos
    
-       **Funcionalidades principales**
-            Análisis léxico de consultas SQL y estructuras NoSQL.
-            Análisis sintáctico basado en reglas definidas.
-            Detección de errores con mensajes claros y precisos.
-            Validación de formatos JSON utilizados en NoSQL.
-            Interfaz simple (consola o interfaz gráfica básica).
-            Soporte inicial para múltiples tipos de consultas.
+**Funcionalidades principales**
+    Análisis léxico de consultas SQL y estructuras NoSQL.
+    Análisis sintáctico basado en reglas definidas.
+    Detección de errores con mensajes claros y precisos.
+    Validación de formatos JSON utilizados en NoSQL.
+    Interfaz simple (consola o interfaz gráfica básica).
+    Soporte inicial para múltiples tipos de consultas.
        
-       El sistema no ejecutará consultas ni modificará bases de datos reales; su función será exclusivamente de validación.
+El sistema no ejecutará consultas ni modificará bases de datos reales; su función será exclusivamente de validación.
 
-    1.3	Definiciones, Siglas y Abreviaturas
-        |CONTROL DE VERSIONES||||||
-        | :-: | :- |
-        |**Término**|**Definición**|
-        |**SQL**|(Structured Query Language) Lenguaje para gestionar bases de datos relacionales.|
-        |**NoSQL**|(Not Only SQL) Conjunto de tecnologías de bases de datos no relacionales.|
-        |**DML**|(Data Manipulation Language) Lenguaje de manipulación de datos (SELECT, INSERT, UPDATE, DELETE).|
-        |**JSON**|(JavaScript Object Notation) Formato ligero de intercambio de datos usado en NoSQL.|
-        |**MongoDB**|Sistema de base de datos NoSQL orientado a documentos.|
-        |**Token**|Unidad mínima en el análisis léxico.|
-        |**Análisis Léxico**|Identificación de tokens dentro de una cadena.|
-        |**Análisis Sintáctico**|Verificación de la estructura según reglas gramaticales.|
-        |**Parser**|Componente que analiza la sintaxis.|
-        |**Validador**|Sistema que verifica la corrección de una entrada.|
+**1.3	Definiciones, Siglas y Abreviaturas**
+|CONTROL DE VERSIONES||||||
+| :-: | :- |
+|**Término**|**Definición**|
+|**SQL**|(Structured Query Language) Lenguaje para gestionar bases de datos relacionales.|
+|**NoSQL**|(Not Only SQL) Conjunto de tecnologías de bases de datos no relacionales.|
+|**DML**|(Data Manipulation Language) Lenguaje de manipulación de datos (SELECT, INSERT, UPDATE, DELETE).|
+|**JSON**|(JavaScript Object Notation) Formato ligero de intercambio de datos usado en NoSQL.| 
+|**MongoDB**|Sistema de base de datos NoSQL orientado a documentos.|
+|**Token**|Unidad mínima en el análisis léxico.|
+|**Análisis Léxico**|Identificación de tokens dentro de una cadena.|
+|**Análisis Sintáctico**|Verificación de la estructura según reglas gramaticales.|
+|**Parser**|Componente que analiza la sintaxis.|
+|**Validador**|Sistema que verifica la corrección de una entrada.|
 
-    1.4	Referencias
+**1.4	Referencias**
         - Informe de Factibilidad del Proyecto (FD01).
         - Repositorio del proyecto en GitHub (gestión de tareas).
         - Documentación oficial de SQL (ANSI SQL).
