@@ -316,6 +316,7 @@ El sistema funcionará de manera local, sin necesidad de conexión a internet ni
 Se espera que el sistema sea ligero, accesible y fácil de utilizar, reduciendo la curva de aprendizaje para usuarios principiantes.
 
 **3.4	Perfiles de los interesados**
+
 **Perfil 1 – Estudiante Desarrollador**
 
    * **Descripción:** Usuario principal que desarrolla e implementa el sistema.
@@ -329,9 +330,11 @@ Se espera que el sistema sea ligero, accesible y fácil de utilizar, reduciendo 
    * **Influencia:** Alta en la validación del proyecto.
 
 **Perfil 3 – Institución Académica**
+
    * **Descripción:** Entidad que respalda el desarrollo del proyecto.
    * **Intereses:** Formación profesional, cumplimiento de estándares educativos.
    * **Influencia:** Media en la orientación del trabajo.
+     
 **Perfil 4 – Comunidad Tecnológica (Potencial)**
    * **Descripción:** Usuarios externos o desarrolladores interesados en la herramienta.
    * **Intereses:** Uso gratuito, mejora del sistema, contribuciones futuras.
@@ -340,22 +343,27 @@ Se espera que el sistema sea ligero, accesible y fácil de utilizar, reduciendo 
 **3.5	Perfiles de los Usuarios**
 
 **Usuario Tipo 1 – Principiante**
+
    * **Perfil:** Estudiante sin experiencia avanzada en bases de datos.
    * **Objetivo:** Comprender errores en consultas SQL y estructuras JSON.
    * **Necesidades:**
       * Mensajes claros
       * Explicaciones simples
       * Retroalimentación inmediata
+        
 **Usuario Tipo 2 – Intermedio**
+
    * **Perfil:** Programador con conocimientos básicos/intermedios.
    * **Objetivo:** Validar consultas antes de su ejecución.
    * **Necesidades:**
       * Precisión en la validación
       * Rapidez en resultados
       * Identificación de errores específicos
+        
 **Usuario Tipo 3 – Avanzado**
+
    * **Perfil:** Desarrollador con experiencia en bases de datos.
-   * **Objetivo:*+ Utilizar la herramienta como apoyo en su flujo de trabajo.
+   * **Objetivo:** Utilizar la herramienta como apoyo en su flujo de trabajo.
    * **Necesidades:**
       * Validaciones confiables
       * Posibilidad de ampliar funcionalidades
