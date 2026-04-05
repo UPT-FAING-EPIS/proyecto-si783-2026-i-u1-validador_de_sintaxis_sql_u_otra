@@ -10,19 +10,19 @@
 
 **Escuela Profesional de Ingeniería de Sistemas**
 
-**Proyecto *{Nombre de Proyecto}***
+**Proyecto *Validador de Sintaxis SQL u otra***
 
-Curso: *{Nombre de Asignatura}*
+Curso: *Base de Datos II*
 
-Docente: *{Nombre de Docente}*
+Docente: *Mag. Patrick Cuadros Quiroga*
 
 Integrantes:
 
-***{Apellidos y nombres del estudiante (código universitario)}***
+***Soto Oquendo Cristian Gabriel (2026086510) Arocutipa Arocutipa Gian Franco (2023076790)***
 
 **Tacna – Perú**
 
-***{Año}***
+***2026***
 
 **  
 **
@@ -45,7 +45,7 @@ Integrantes:
 
 
 
-**Sistema *{Nombre del Sistema}***
+**Sistema *Validador de Sintaxis SQL u otra***
 
 **Documento de Visión**
 
@@ -143,6 +143,11 @@ e) Estandaraes de calidad y seguridad	](#_toc394513800)42
 1. <span id="_Toc52661346" class="anchor"></span>**Introducción**
 
     1.1	Propósito
+       *El presente documento tiene como propósito definir la visión, objetivos y lineamientos generales para el desarrollo de un Sistema Validador de Sintaxis para Bases de Datos SQL y NoSQL, orientado a verificar la correcta estructura de consultas antes de su ejecución.
+
+El sistema permitirá a estudiantes y desarrolladores identificar errores sintácticos de manera anticipada, reduciendo fallos en tiempo de ejecución y mejorando la calidad del desarrollo de software. Además, busca fortalecer conocimientos en áreas como análisis léxico, análisis sintáctico y procesamiento de lenguajes, utilizando tecnologías como Java y C#.
+
+Asimismo, el proyecto responde a la necesidad actual de trabajar tanto con bases de datos relacionales como no relacionales, integrando validaciones para ambos paradigmas.*
 
     1.2	Alcance
 
