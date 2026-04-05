@@ -144,11 +144,9 @@ e) Estandaraes de calidad y seguridad	](#_toc394513800)42
 
     1.1	Propósito
    
-       El presente documento tiene como propósito definir la visión, objetivos y lineamientos generales para el desarrollo de        un Sistema Validador de Sintaxis para Bases de Datos SQL y NoSQL, orientado a verificar la correcta estructura de             consultas antes de su ejecución.
-       
-       El sistema permitirá a estudiantes y desarrolladores identificar errores sintácticos de manera anticipada, reduciendo         fallos en tiempo de ejecución y mejorando la calidad del desarrollo de software. Además, busca fortalecer                     conocimientos en áreas como análisis léxico, análisis sintáctico y procesamiento de lenguajes, utilizando tecnologías         como Java y C#.
-       
-       Asimismo, el proyecto responde a la necesidad actual de trabajar tanto con bases de datos relacionales como no                relacionales, integrando validaciones para ambos paradigmas.
+El presente documento tiene como propósito definir la visión, objetivos y lineamientos generales para el desarrollo de        un Sistema Validador de Sintaxis para Bases de Datos SQL y NoSQL, orientado a verificar la correcta estructura de             consultas antes de su ejecución.       
+El sistema permitirá a estudiantes y desarrolladores identificar errores sintácticos de manera anticipada, reduciendo         fallos en tiempo de ejecución y mejorando la calidad del desarrollo de software. Además, busca fortalecer                     conocimientos en áreas como análisis léxico, análisis sintáctico y procesamiento de lenguajes, utilizando tecnologías         como Java y C#.
+Asimismo, el proyecto responde a la necesidad actual de trabajar tanto con bases de datos relacionales como no                relacionales, integrando validaciones para ambos paradigmas.
    
     1.2	Alcance
        El sistema estará enfocado en la validación de estructuras y consultas en dos tipos de bases de datos:
