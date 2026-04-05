@@ -177,8 +177,8 @@ El sistema estará enfocado en la validación de estructuras y consultas en dos 
 El sistema no ejecutará consultas ni modificará bases de datos reales; su función será exclusivamente de validación.
 
 **1.3	Definiciones, Siglas y Abreviaturas**
-| :--- | :--- |
 |**Término**|**Definición**|
+| :--- | :--- |
 |**SQL**|(Structured Query Language) Lenguaje para gestionar bases de datos relacionales.|
 |**NoSQL**|(Not Only SQL) Conjunto de tecnologías de bases de datos no relacionales.|
 |**DML**|(Data Manipulation Language) Lenguaje de manipulación de datos (SELECT, INSERT, UPDATE, DELETE).|
