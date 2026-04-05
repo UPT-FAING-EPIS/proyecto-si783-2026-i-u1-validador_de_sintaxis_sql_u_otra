@@ -149,6 +149,7 @@ El presente documento tiene como propósito definir la visión, objetivos y line
 El sistema permitirá a estudiantes y desarrolladores identificar errores sintácticos de manera anticipada, reduciendo         fallos en tiempo de ejecución y mejorando la calidad del desarrollo de software. Además, busca fortalecer                     conocimientos en áreas como análisis léxico, análisis sintáctico y procesamiento de lenguajes, utilizando tecnologías         como Java y C#.
 
 Asimismo, el proyecto responde a la necesidad actual de trabajar tanto con bases de datos relacionales como no                relacionales, integrando validaciones para ambos paradigmas.
+
    
 **1.2	Alcance**
 
@@ -176,6 +177,7 @@ El sistema estará enfocado en la validación de estructuras y consultas en dos 
        
 El sistema no ejecutará consultas ni modificará bases de datos reales; su función será exclusivamente de validación.
 
+
 **1.3	Definiciones, Siglas y Abreviaturas**
 |**Término**|**Definición**|
 | :--- | :--- |
@@ -190,26 +192,32 @@ El sistema no ejecutará consultas ni modificará bases de datos reales; su func
 |**Parser**|Componente que analiza la sintaxis.|
 |**Validador**|Sistema que verifica la corrección de una entrada.|
 
+
 **1.4	Referencias**
-        - Informe de Factibilidad del Proyecto (FD01).
-        - Repositorio del proyecto en GitHub (gestión de tareas).
-        - Documentación oficial de SQL (ANSI SQL).
-        - Documentación de MongoDB (NoSQL).
-        - Documentación oficial de Java y C#.
-        - Material académico de cursos de Base de Datos y Compiladores.
-    1.5	Visión General
-        El Sistema Validador de Sintaxis SQL y NoSQL se plantea como una herramienta integral que permite validar consultas y         estructuras de datos en diferentes paradigmas de bases de datos, contribuyendo a mejorar la calidad del software y            reducir errores comunes en el desarrollo.
+
+* Informe de Factibilidad del Proyecto (FD01)
+* Repositorio del proyecto en GitHub (gestión de tareas).
+* Documentación oficial de SQL (ANSI SQL).
+* Documentación de MongoDB (NoSQL).
+* Documentación oficial de Java y C#.
+* Material académico de cursos de Base de Datos y Compiladores.
+
+  
+**1.5	Visión General**
+
+El Sistema Validador de Sintaxis SQL y NoSQL se plantea como una herramienta integral que permite validar consultas y         estructuras de datos en diferentes paradigmas de bases de datos, contribuyendo a mejorar la calidad del software y            reducir errores comunes en el desarrollo.
         
-        El sistema se desarrollará utilizando Java y C#, aprovechando recursos de software libre y sin depender directamente          de motores de bases de datos para su funcionamiento, lo que garantiza portabilidad y facilidad de uso.
+El sistema se desarrollará utilizando Java y C#, aprovechando recursos de software libre y sin depender directamente          de motores de bases de datos para su funcionamiento, lo que garantiza portabilidad y facilidad de uso.
         
-        Además, el sistema está diseñado con una visión escalable, permitiendo futuras mejoras como:
+Además, el sistema está diseñado con una visión escalable, permitiendo futuras mejoras como:
+
+* Soporte para más motores NoSQL.
+* Integración con entornos de desarrollo (IDE).
+* Validación semántica más avanzada.
+* Extensión a otros lenguajes de consulta.
         
-            - Soporte para más motores NoSQL.
-            - Integración con entornos de desarrollo (IDE).
-            - Validación semántica más avanzada.
-            - Extensión a otros lenguajes de consulta.
-        
-        De esta manera, el proyecto no solo cumple un propósito académico, sino que también sienta bases para el desarrollo           de herramientas más complejas en el ámbito profesional.
+De esta manera, el proyecto no solo cumple un propósito académico, sino que también sienta bases para el desarrollo           de herramientas más complejas en el ámbito profesional.
+
 <div style="page-break-after: always; visibility: hidden">\pagebreak</div>
 
 2. <span id="_Toc52661347" class="anchor"></span>**Posicionamiento**
