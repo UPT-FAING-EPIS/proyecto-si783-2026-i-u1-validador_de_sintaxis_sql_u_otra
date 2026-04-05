@@ -151,6 +151,7 @@ El sistema permitirá a estudiantes y desarrolladores identificar errores sintá
 Asimismo, el proyecto responde a la necesidad actual de trabajar tanto con bases de datos relacionales como no                relacionales, integrando validaciones para ambos paradigmas.
    
 **1.2	Alcance**
+
 El sistema estará enfocado en la validación de estructuras y consultas en dos tipos de bases de datos:
     
 **Bases de Datos Relacionales (SQL)**
@@ -176,8 +177,7 @@ El sistema estará enfocado en la validación de estructuras y consultas en dos 
 El sistema no ejecutará consultas ni modificará bases de datos reales; su función será exclusivamente de validación.
 
 **1.3	Definiciones, Siglas y Abreviaturas**
-|CONTROL DE VERSIONES||||||
-| :-: | :- |
+| :--- | :--- |
 |**Término**|**Definición**|
 |**SQL**|(Structured Query Language) Lenguaje para gestionar bases de datos relacionales.|
 |**NoSQL**|(Not Only SQL) Conjunto de tecnologías de bases de datos no relacionales.|
