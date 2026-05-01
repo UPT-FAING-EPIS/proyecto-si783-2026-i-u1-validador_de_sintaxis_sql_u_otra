@@ -1,0 +1,28 @@
+{
+  "name": "sql-nosql-syntax-validator",
+  "version": "1.1.0",
+  "description": "SQL/NoSQL Syntax Validator - MVC Refactorizado con carga de archivos y soporte Vercel",
+  "main": "backend/server.js",
+  "scripts": {
+    "start": "node backend/server.js",
+    "dev": "nodemon backend/server.js",
+    "install-deps": "npm install",
+    "test": "echo \"No tests configured\" && exit 0",
+    "build": "echo \"No build step required\"",
+    "vercel-build": "npm run build"
+  },
+  "keywords": ["sql", "nosql", "validator", "mongodb", "syntax", "mvc", "vercel", "serverless"],
+  "author": "SQL/NoSQL Validator - Universidad Privada de Tacna",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "node-sql-parser": "^4.11.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.2"
+  }
+}
