@@ -29,3 +29,5 @@ build/
 # Temporal
 tmp/
 temp/
+
+.vercel
