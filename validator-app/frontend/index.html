@@ -3,9 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="SQL/NoSQL Syntax Validator - Valida tus consultas SQL y MongoDB con resaltado de errores y sugerencias inteligentes." />
-  <meta name="keywords" content="SQL, NoSQL, MongoDB, validator, syntax, query, checker" />
-  <meta name="author" content="SQL/NoSQL Validator Tool" />
+  <meta name="description" content="SQL/NoSQL Syntax Validator" />
   <title>SQL/NoSQL Syntax Validator</title>
 
   <!-- Google Fonts -->
@@ -21,9 +19,7 @@
 </head>
 <body class="theme-dark">
 
-  <!-- ══════════════════════════════════
-       HEADER / BARRA SUPERIOR
-  ══════════════════════════════════ -->
+  <!-- HEADER / BARRA SUPERIOR -->
   <header class="app-header" role="banner">
     <div class="header-left">
       <div class="logo">
@@ -50,7 +46,6 @@
     </div>
 
     <div class="header-right">
-      <!-- Toggle claro/oscuro -->
       <button class="btn-icon" id="btn-theme-toggle" title="Cambiar tema" aria-label="Cambiar entre tema claro y oscuro">
         <span class="theme-icon">🌙</span>
       </button>
@@ -61,35 +56,41 @@
     </div>
   </header>
 
-  <!-- ══════════════════════════════════
-       LAYOUT PRINCIPAL (3 PANELES)
-  ══════════════════════════════════ -->
+  <!-- LAYOUT PRINCIPAL (3 PANELES) -->
   <main class="app-layout" role="main">
 
-    <!-- ───────────────────────────────
-         SIDEBAR IZQUIERDO: Controles
-    ─────────────────────────────────── -->
+    <!-- SIDEBAR IZQUIERDO: Controles -->
     <aside class="sidebar" id="sidebar" aria-label="Panel de controles">
 
-      <!-- Selector de lenguaje -->
-      <section class="sidebar-section" aria-labelledby="lang-heading">
-        <h2 class="section-title" id="lang-heading">
-          <span class="section-icon" aria-hidden="true">🗃️</span>
-          Lenguaje
-        </h2>
-        <div class="language-selector">
-          <label for="language-select" class="sr-only">Seleccionar tipo de lenguaje</label>
-          <select id="language-select" class="select-input" aria-describedby="lang-desc">
-            <option value="sql">SQL</option>
-            <option value="nosql">MongoDB (NoSQL)</option>
-          </select>
-          <p class="select-desc" id="lang-desc">Elige el tipo de consulta a validar</p>
-        </div>
-        <div class="lang-badge" id="lang-badge" aria-live="polite">
-          <span class="badge sql-badge" id="badge-label">SQL</span>
-          <span class="badge-desc" id="badge-desc">Structured Query Language</span>
-        </div>
-      </section>
+<!-- Selector de lenguaje -->
+       <section class="sidebar-section" aria-labelledby="lang-heading">
+         <h2 class="section-title" id="lang-heading">
+           <span class="section-icon" aria-hidden="true">🗃️</span>
+           Lenguaje
+         </h2>
+         <div class="language-selector">
+           <label for="language-select" class="sr-only">Seleccionar tipo de lenguaje</label>
+           <select id="language-select" class="select-input" aria-describedby="lang-desc">
+             <option value="sql">SQL</option>
+             <option value="nosql">MongoDB (NoSQL)</option>
+           </select>
+           <p class="select-desc" id="lang-desc">Elige el tipo de consulta a validar</p>
+         </div>
+         <div class="lang-badge" id="lang-badge" aria-live="polite">
+           <span class="badge sql-badge" id="badge-label">SQL</span>
+           <span class="badge-desc" id="badge-desc">Structured Query Language</span>
+         </div>
+         <!-- Selector de dialecto SQL (visible solo para SQL) -->
+         <div class="dialect-selector" id="dialect-selector" hidden>
+           <label for="dialect-select" class="sr-only">Seleccionar dialecto SQL</label>
+           <select id="dialect-select" class="select-input dialect-select">
+             <option value="MySQL">MySQL</option>
+             <option value="PostgreSQL">PostgreSQL</option>
+             <option value="SQLite">SQLite</option>
+             <option value="ANSI">ANSI SQL</option>
+           </select>
+         </div>
+       </section>
 
       <!-- Acciones principales -->
       <section class="sidebar-section" aria-labelledby="actions-heading">
@@ -127,36 +128,22 @@
         </div>
       </section>
 
-      <!-- Opciones -->
-      <section class="sidebar-section" aria-labelledby="options-heading">
-        <h2 class="section-title" id="options-heading">
-          <span class="section-icon" aria-hidden="true">⚙️</span>
-          Opciones
-        </h2>
-        <div class="options-group">
-          <label class="toggle-label" for="opt-autovalidate">
-            <span class="toggle-text">Auto-validar</span>
-            <div class="toggle-switch">
-              <input type="checkbox" id="opt-autovalidate" role="switch" aria-checked="false" />
-              <span class="toggle-slider"></span>
-            </div>
-          </label>
-          <label class="toggle-label" for="opt-minimap">
-            <span class="toggle-text">Minimapa</span>
-            <div class="toggle-switch">
-              <input type="checkbox" id="opt-minimap" role="switch" aria-checked="true" checked />
-              <span class="toggle-slider"></span>
-            </div>
-          </label>
-          <label class="toggle-label" for="opt-wordwrap">
-            <span class="toggle-text">Ajustar líneas</span>
-            <div class="toggle-switch">
-              <input type="checkbox" id="opt-wordwrap" role="switch" aria-checked="false" />
-              <span class="toggle-slider"></span>
-            </div>
-          </label>
-        </div>
-      </section>
+<!-- Opciones -->
+       <section class="sidebar-section" aria-labelledby="options-heading">
+         <h2 class="section-title" id="options-heading">
+           <span class="section-icon" aria-hidden="true">⚙️</span>
+           Opciones
+         </h2>
+         <div class="options-group">
+           <label class="toggle-label" for="opt-minimap">
+             <span class="toggle-text">Minimapa</span>
+             <div class="toggle-switch">
+               <input type="checkbox" id="opt-minimap" role="switch" aria-checked="true" checked />
+               <span class="toggle-slider"></span>
+             </div>
+           </label>
+         </div>
+       </section>
 
       <!-- Estadísticas -->
       <section class="sidebar-section stats-section" aria-labelledby="stats-heading">
@@ -185,9 +172,7 @@
       </section>
     </aside>
 
-    <!-- ───────────────────────────────
-         PANEL CENTRAL: Editor + Resultados
-    ─────────────────────────────────── -->
+    <!-- PANEL CENTRAL: Editor + Resultados -->
     <div class="editor-panel" id="editor-panel" role="tabpanel" aria-labelledby="tab-editor">
 
       <!-- Barra info del editor -->
@@ -209,9 +194,7 @@
         <div id="monaco-editor"></div>
       </div>
 
-      <!-- ───────────────────────────
-           PANEL DE RESULTADOS
-      ─────────────────────────────── -->
+      <!-- PANEL DE RESULTADOS -->
       <div class="results-panel" id="results-panel" aria-label="Panel de resultados">
         <div class="results-header">
           <h3 class="results-title" id="results-title">
@@ -226,7 +209,7 @@
         <div class="results-empty" id="results-empty" role="status">
           <div class="empty-icon" aria-hidden="true">⌨️</div>
           <p class="empty-text">Escribe una consulta y haz clic en <strong>Validar</strong></p>
-          <p class="empty-hint">Usa <kbd>Ctrl+Enter</kbd> para validar rápidamente</p>
+          <p class="empty-hint">Usa <kbd>Ctrl+Enter</kbd> para validar rápido</p>
         </div>
 
         <!-- Loader -->
@@ -265,9 +248,7 @@
       </div>
     </div>
 
-    <!-- ───────────────────────────────
-         PANEL HISTORIAL
-    ─────────────────────────────────── -->
+    <!-- PANEL HISTORIAL -->
     <div class="history-panel" id="history-panel" role="tabpanel" aria-labelledby="tab-history" hidden>
       <div class="history-header">
         <h3 class="history-title">📋 Historial de Validaciones</h3>
@@ -285,37 +266,37 @@
 
   </main>
 
-  <!-- ══════════════════════════════════
-       BARRA DE ESTADO (Footer)
-  ══════════════════════════════════ -->
-  <footer class="status-bar" role="contentinfo" aria-label="Barra de estado">
-    <div class="status-left">
-      <span class="status-item" id="status-language">
-        <span class="status-icon" aria-hidden="true">🗃️</span>
-        SQL
-      </span>
-      <span class="status-item">
-        <span class="status-icon" aria-hidden="true">⚡</span>
-        node-sql-parser v4
-      </span>
-    </div>
-    <div class="status-center">
-      <span class="status-item" id="status-message" aria-live="polite">Listo para validar</span>
-    </div>
-    <div class="status-right">
-      <span class="status-item">
-        SQL/NoSQL Validator v1.0
-      </span>
-      <span class="status-item">
-        <span class="status-icon" aria-hidden="true">🕐</span>
-        <span id="status-time"></span>
-      </span>
-    </div>
-  </footer>
+<!-- BARRA DE ESTADO (Footer) -->
+   <footer class="status-bar" role="contentinfo" aria-label="Barra de estado">
+     <div class="status-left">
+       <span class="status-item" id="status-language">
+         <span class="status-icon" aria-hidden="true">🗃️</span>
+         SQL
+       </span>
+       <span class="status-item dialect-badge" id="dialect-badge" hidden>
+         <span class="status-icon" aria-hidden="true">⚙️</span>
+         <span id="dialect-name">MySQL</span>
+       </span>
+       <span class="status-item">
+         <span class="status-icon" aria-hidden="true">⚡</span>
+         node-sql-parser v4
+       </span>
+     </div>
+     <div class="status-center">
+       <span class="status-item" id="status-message" aria-live="polite">Listo para validar</span>
+     </div>
+     <div class="status-right">
+       <span class="status-item">
+         SQL/NoSQL Validator v1.0
+       </span>
+       <span class="status-item">
+         <span class="status-icon" aria-hidden="true">🕐</span>
+         <span id="status-time"></span>
+       </span>
+     </div>
+   </footer>
 
-  <!-- ══════════════════════════════════
-       MODAL: Selector de ejemplos
-  ══════════════════════════════════ -->
+  <!-- MODAL: Selector de ejemplos -->
   <div class="modal-overlay" id="modal-examples" role="dialog" aria-modal="true" aria-labelledby="modal-title" hidden>
     <div class="modal">
       <div class="modal-header">
@@ -332,9 +313,7 @@
     </div>
   </div>
 
-  <!-- ══════════════════════════════════
-       TOAST / NOTIFICACIONES
-  ══════════════════════════════════ -->
+  <!-- TOAST / NOTIFICACIONES -->
   <div class="toast-container" id="toast-container" role="region" aria-label="Notificaciones" aria-live="polite"></div>
 
   <!-- Script principal de la app -->

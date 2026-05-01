@@ -4,16 +4,16 @@
  * Recibe parámetros, delega al servicio, formatea respuesta.
  */
 
-const { validateSQL, validateNoSQL } = require('../services/validation.service');
+const { validateSQL, validateNoSQL, DIALECTS } = require('../services/validation.service');
 
 /**
  * POST /api/validate
  * Valida una consulta SQL o NoSQL.
- * Body: { type: 'sql' | 'nosql', query: string }
+ * Body: { type: 'sql' | 'nosql', query: string, dialect?: string }
  */
 function validateQuery(req, res, next) {
   try {
-    const { type, query } = req.body;
+    const { type, query, dialect } = req.body;
 
     // 1. Validación de parámetros de entrada
     if (!type || !['sql', 'nosql'].includes(type.toLowerCase())) {
@@ -31,7 +31,8 @@ function validateQuery(req, res, next) {
     // 2. Delegar al servicio apropiado
     let result;
     if (type.toLowerCase() === 'sql') {
-      result = validateSQL(query);
+      const sqlDialect = dialect && DIALECTS.includes(dialect) ? dialect : 'MySQL';
+      result = validateSQL(query, sqlDialect);
     } else {
       result = validateNoSQL(query);
     }
@@ -67,7 +68,7 @@ function getExamples(req, res) {
   res.json({
     sql: [
       {
-        label: 'SELECT básico',
+        label: 'SELECT básico (MySQL)',
         query: 'SELECT * FROM usuarios WHERE edad > 18 ORDER BY nombre ASC;'
       },
       {
@@ -91,6 +92,19 @@ WHERE departamento = 'Tecnología';`
       {
         label: 'DELETE seguro',
         query: 'DELETE FROM sesiones WHERE fecha_expiracion < NOW();'
+      },
+      {
+        label: 'PostgreSQL - RETURNING',
+        query: `UPDATE usuarios
+SET activo = false
+WHERE ultimo_login < '2023-01-01'
+RETURNING id, nombre;`
+      },
+      {
+        label: 'SQLite - LIMIT/OFFSET',
+        query: `SELECT * FROM productos
+ORDER BY nombre
+LIMIT 10 OFFSET 20;`
       },
       {
         label: 'SQL con error',
@@ -149,6 +163,41 @@ WHERE departamento = 'Tecnología';`
             { $sort: { total: -1 } },
             { $limit: 10 }
           ]
+        }, null, 2)
+      },
+      {
+        label: 'updateOne() con $mod',
+        query: JSON.stringify({
+          updateOne: 'articulos',
+          filter: { version: { $mod: [2, 0] } },
+          update: { $set: { es_par: true } }
+        }, null, 2)
+      },
+      {
+        label: 'updateOne() con $text',
+        query: JSON.stringify({
+          updateOne: 'posts',
+          filter: { $text: { $search: 'mongodb' } },
+          update: { $set: { etiquetado: true } }
+        }, null, 2)
+      },
+      {
+        label: 'startSession() - Transacción',
+        query: JSON.stringify({
+          startSession: 'session1',
+          withTransaction: {
+            updateOne: 'cuentas',
+            filter: { _id: 'user1' },
+            update: { $inc: { saldo: -100 } }
+          }
+        }, null, 2)
+      },
+      {
+        label: 'enableSharding()',
+        query: JSON.stringify({
+          enableSharding: 'miDB',
+          shardCollection: 'miDB.collection',
+          key: { campoShard: 1 }
         }, null, 2)
       },
       {

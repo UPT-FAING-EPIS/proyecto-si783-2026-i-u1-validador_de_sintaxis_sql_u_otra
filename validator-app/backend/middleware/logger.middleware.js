@@ -6,7 +6,7 @@
 
 function logger(req, res, next) {
   const start = Date.now();
-  consttimestamp = new Date().toISOString();
+  const timestamp = new Date().toISOString();
 
   // Log cuando la respuesta termine
   res.on('finish', () => {
