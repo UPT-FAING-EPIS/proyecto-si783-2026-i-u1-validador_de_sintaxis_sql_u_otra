@@ -61,121 +61,158 @@ Integrantes:
 ### **1.1 Nombre del proyecto**
 **Validador de Sintaxis SQL u otra.**
 
+---
+
 ### **1.2 Duración del proyecto**
-El cronograma de trabajo está diseñado para completarse en **1 mes (4 semanas)**, abarcando desde el análisis de requerimientos hasta las pruebas finales y documentación.
+El proyecto tiene una duración estimada de **1 mes (4 semanas)**, estructurado en fases bien definidas:
+
+- **Semana 1:** Análisis de requerimientos, investigación de tecnologías y diseño de arquitectura.
+- **Semana 2:** Desarrollo del backend (API REST, lógica de validación).
+- **Semana 3:** Desarrollo del frontend (interfaz web, integración con editor Monaco).
+- **Semana 4:** Pruebas funcionales, optimización, documentación final.
+
+Este cronograma considera iteraciones rápidas, pruebas continuas y validación incremental del sistema.
+
+---
 
 ### **1.3 Descripción Detallada**
-El proyecto consiste en el desarrollo de una **aplicación web interactiva** para la validación de sintaxis SQL y NoSQL. El sistema opera bajo una arquitectura cliente-servidor, donde el usuario interactúa mediante un editor de código en el navegador, mientras que el backend procesa las consultas.
+El presente proyecto consiste en el desarrollo de un **sistema web especializado en la validación de sintaxis de consultas SQL y NoSQL**, diseñado bajo una arquitectura cliente-servidor que permite separar claramente la lógica de negocio del entorno de presentación.
 
-A diferencia de herramientas tradicionales acopladas a motores de bases de datos, este sistema permite validar consultas de forma **rápida, segura e independiente**, sin necesidad de conexión a un servidor real.
+El sistema permite a los usuarios ingresar consultas a través de un editor de código avanzado integrado en el navegador (Monaco Editor), el cual simula la experiencia de entornos profesionales como Visual Studio Code. Estas consultas son enviadas al servidor mediante peticiones HTTP, donde son procesadas por un módulo de validación encargado de analizar su estructura sintáctica.
 
-El sistema incluye:
-- Validación de múltiples dialectos SQL (MySQL, PostgreSQL, SQLite, ANSI)
-- Validación de consultas NoSQL (MongoDB)
-- Detección de errores por línea y columna
-- Sugerencias de corrección
-- Interfaz web moderna con Monaco Editor
+A nivel técnico, el sistema realiza un proceso similar al de un compilador:
+1. **Análisis léxico:** Identificación de tokens (palabras reservadas, operadores, identificadores).
+2. **Análisis sintáctico:** Verificación de la estructura gramatical.
+3. **Detección de errores:** Identificación de inconsistencias en la consulta.
+4. **Retroalimentación:** Generación de mensajes claros con ubicación exacta.
 
-Esta herramienta está orientada a estudiantes y desarrolladores que buscan mejorar la calidad de sus consultas antes de ejecutarlas en entornos reales.
+Para SQL, se utilizan librerías especializadas que permiten interpretar múltiples dialectos, mientras que para NoSQL (MongoDB), se valida la estructura de comandos y documentos JSON.
+
+Este sistema no ejecuta consultas reales, lo cual elimina riesgos sobre bases de datos y lo convierte en una herramienta ideal para:
+- Aprendizaje académico
+- Validación previa en desarrollo
+- Pruebas rápidas de consultas
+
+Además, el sistema está diseñado con posibilidad de escalabilidad, permitiendo integrar en el futuro funcionalidades como autenticación, almacenamiento de historial, y módulos de práctica.
 
 ---
 
 ### **1.4 Objetivos**
 
 #### **1.4.1 Objetivo General**
-Desarrollar un sistema web de validación eficiente que permita verificar la estructura sintáctica de consultas SQL y NoSQL antes de su ejecución en sistemas reales.
+Desarrollar una aplicación web capaz de validar de manera eficiente y precisa la sintaxis de consultas SQL y NoSQL, proporcionando retroalimentación inmediata al usuario.
+
+---
 
 #### **1.4.2 Objetivos Específicos**
-* Implementar un backend con Node.js y Express para procesar validaciones.
-* Integrar un editor de código interactivo (Monaco Editor).
-* Detectar errores con ubicación exacta (línea y columna).
-* Soportar múltiples dialectos SQL y consultas MongoDB.
-* Diseñar una interfaz intuitiva y accesible.
-* Implementar endpoints API para validación (`/api/validate`).
+* Diseñar una arquitectura basada en el patrón MVC.
+* Implementar un backend con Node.js y Express.
+* Integrar librerías de parsing para SQL.
+* Validar estructuras de consultas MongoDB.
+* Detectar errores con precisión (línea y columna).
+* Implementar un sistema de mensajes de error claros.
+* Desarrollar una interfaz web moderna.
+* Optimizar tiempos de respuesta del sistema.
+* Permitir futura integración de funcionalidades educativas.
 
 ---
 
 ## **2. Riesgos**
-* Dependencia de librerías externas para parsing.
-* Complejidad en soporte de múltiples dialectos SQL.
-* Posibles problemas de rendimiento en validación en tiempo real.
-* Limitaciones en la validación de consultas NoSQL complejas.
-* Posible ampliación del alcance del proyecto.
+
+El desarrollo del sistema presenta los siguientes riesgos potenciales:
+
+* **Dependencia tecnológica:** El uso de librerías externas puede limitar la flexibilidad del sistema.
+* **Complejidad de implementación:** La validación sintáctica completa es un proceso complejo.
+* **Compatibilidad:** Diferencias entre dialectos SQL pueden generar inconsistencias.
+* **Rendimiento:** Validaciones frecuentes pueden afectar la experiencia del usuario.
+* **Escalabilidad:** El sistema podría requerir rediseño si crece en funcionalidad.
+* **Curva de aprendizaje:** Dominio de herramientas modernas puede representar un reto inicial.
 
 ---
 
 ## **3. Análisis de la Situación Actual**
 
 ### **3.1 Planteamiento del Problema**
-Actualmente, estudiantes y desarrolladores validan consultas ejecutándolas directamente en motores de bases de datos, lo que genera:
+Actualmente, la validación de consultas se realiza directamente en motores de bases de datos, lo que implica:
 
-1. Consumo innecesario de recursos.
-2. Mensajes de error poco claros.
+1. Uso innecesario de recursos computacionales.
+2. Mensajes de error poco intuitivos.
 3. Riesgo de afectar datos reales.
+4. Dependencia de entornos específicos.
+5. Dificultad en el aprendizaje para estudiantes.
 
 ---
 
 ### **3.2 Consideraciones de Infraestructura**
-El sistema se basa en una arquitectura **MVC**:
+El sistema adopta el patrón **MVC en entorno web**, permitiendo:
 
-**Tecnologías:**
+- Separación de responsabilidades
+- Mantenimiento sencillo
+- Escalabilidad
+
+**Tecnologías utilizadas:**
 - Backend: Node.js + Express
-- Frontend: HTML, CSS, JavaScript
+- Frontend: HTML5, CSS3, JavaScript
 - Editor: Monaco Editor
 - Librerías: node-sql-parser
 - Control de versiones: GitHub
-
-Esto permite escalabilidad, mantenimiento sencillo y futura expansión.
 
 ---
 
 ## **4. Estudio de Factibilidad**
 
 ### **4.1 Factibilidad Técnica**
-El proyecto es viable debido al uso de tecnologías modernas, accesibles y ampliamente documentadas. El equipo cuenta con conocimientos en desarrollo web, bases de datos y APIs REST.
+El proyecto es altamente viable debido a:
+- Disponibilidad de tecnologías modernas
+- Amplia documentación
+- Experiencia del equipo
+
+Además, el uso de APIs REST permite una arquitectura flexible y escalable.
 
 ---
 
 ### **4.2 Factibilidad Económica**
-El costo del proyecto es bajo debido al uso de herramientas gratuitas, lo que lo hace sostenible y accesible.
 
-*(Se mantiene tu tabla original sin cambios)*
+*(TABLAS SE MANTIENEN IGUALES — NO SE MODIFICAN)*
 
 ---
 
 ### **4.3 Factibilidad Operativa**
-El sistema es fácil de usar:
+El sistema presenta alta operatividad debido a:
+
 - Acceso desde navegador
-- No requiere instalación
 - Interfaz intuitiva
+- No requiere instalación
 
 Beneficios:
-- Reducción del tiempo de depuración
+- Reducción de tiempo
 - Mejora del aprendizaje
-- Eliminación de riesgos en bases reales
+- Eliminación de riesgos
 
 ---
 
 ### **4.4 Factibilidad Legal**
-Cumple con normativas:
+El proyecto cumple con:
 - Uso de software libre
-- Código propio
-- No manejo de datos personales
+- Respeto de licencias
+- No manejo de datos sensibles
 
 ---
 
 ### **4.5 Factibilidad Social**
-Impacto positivo en estudiantes:
-- Mejora el aprendizaje
+El impacto social es positivo:
+
+- Mejora el aprendizaje académico
 - Reduce frustración
 - Facilita la práctica
 
 ---
 
 ### **4.6 Factibilidad Ambiental**
-Impacto mínimo:
+El impacto ambiental es mínimo debido a:
+
 - Uso digital
-- Sin infraestructura adicional
+- Sin hardware adicional
 - Optimización de recursos
 
 ---
@@ -183,25 +220,22 @@ Impacto mínimo:
 ## **5. Análisis Financiero**
 
 ### **5.1 Justificación de la Inversión**
-El proyecto aporta beneficios en eficiencia, aprendizaje y reducción de errores.
+El proyecto genera beneficios en eficiencia, aprendizaje y optimización de recursos.
 
 ---
 
-### **5.2 Indicadores**
-- Relación B/C > 1  
-- VAN > 0  
-- TIR > COK  
+### **5.2 Criterios de Inversión**
+* Relación B/C > 1  
+* VAN > 0  
+* TIR > COK  
 
 ---
 
 ## **6. Conclusiones**
 
-1. El proyecto es técnicamente viable gracias a tecnologías modernas.
-2. Presenta bajo costo y alto beneficio académico.
+1. El proyecto es completamente viable desde el punto de vista técnico.
+2. Presenta bajo costo y alto impacto académico.
 3. Mejora significativamente el proceso de aprendizaje.
-4. Reduce riesgos en bases de datos reales.
-5. Permite futuras mejoras como:
-   - Sistema de usuarios
-   - Modo práctica
-   - Gamificación
-6. Se recomienda continuar con el desarrollo del sistema web.
+4. Reduce riesgos en entornos reales.
+5. Permite escalabilidad futura.
+6. Se recomienda su implementación.
