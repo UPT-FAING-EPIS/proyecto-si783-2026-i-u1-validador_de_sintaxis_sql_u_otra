@@ -46,12 +46,17 @@
 
 ---
 
-# **ÍNDICE GENERAL**
-
+# **ÍNDICE GENERAL** 
 1. [Descripción del Proyecto](#1-descripción-del-proyecto)
 2. [Riesgos](#2-riesgos)
 3. [Análisis de la Situación Actual](#3-análisis-de-la-situación-actual)
 4. [Estudio de Factibilidad](#4-estudio-de-factibilidad)
+   - 4.1 [Factibilidad Técnica](#41-factibilidad-técnica)
+   - 4.2 [Factibilidad Económica](#42-factibilidad-económica)
+   - 4.3 [Factibilidad Operativa](#43-factibilidad-operativa)
+   - 4.4 [Factibilidad Legal](#44-factibilidad-legal)
+   - 4.5 [Factibilidad Social](#45-factibilidad-social)
+   - 4.6 [Factibilidad Ambiental](#46-factibilidad-ambiental)
 5. [Análisis Financiero](#5-análisis-financiero)
 6. [Conclusiones](#6-conclusiones)
 
