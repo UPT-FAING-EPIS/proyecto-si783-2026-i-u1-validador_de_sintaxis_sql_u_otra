@@ -1,5 +1,4 @@
 <center>
-
 [comment]: <img src="./media/media/image1.png" style="width:1.088in;height:1.46256in" alt="escudo.png" />
 ![./media/media/image1.png](./media/logo-upt.png)
 **UNIVERSIDAD PRIVADA DE TACNA**
@@ -15,82 +14,54 @@ Integrantes:
 **  
 **
 </center>
-
 <div style="page-break-after: always; visibility: hidden">\pagebreak</div>
-
 |CONTROL DE VERSIONES||||||
 | :-: | :- | :- | :- | :- | :- |
 |Versión|Hecha por|Revisada por|Aprobada por|Fecha|Motivo|
-|1\.0|Soto / Arocutipa|Patrick Cuadros|Patrick Cuadros|28/03/2026|Versión Original|
-
+|1\.0|MPV|ELV|ARV|10/10/2020|Versión Original|
 **Sistema *Validador de Sintaxis SQL u otra***
-
 **Documento de Visión**
-
 **Versión *{1.0}***
-
 **
-
 <div style="page-break-after: always; visibility: hidden">\pagebreak</div>
-
 |CONTROL DE VERSIONES||||||
 | :-: | :- | :- | :- | :- | :- |
 |Versión|Hecha por|Revisada por|Aprobada por|Fecha|Motivo|
-|1\.0|Soto / Arocutipa|Patrick Cuadros|Patrick Cuadros|28/03/2026|Versión Original|
-
+|1\.0|MPV|ELV|ARV|10/10/2020|Versión Original|
 <div style="page-break-after: always; visibility: hidden">\pagebreak</div>
-
 **INDICE GENERAL**
-
 #
-[1.	Introducción](#_Toc52661346)
-
-1.1	Propósito
-1.2	Alcance
-1.3	Definiciones, Siglas y Abreviaturas
-1.4	Referencias
-1.5	Visión General
-
-[2.	Posicionamiento](#_Toc52661347)
-
-2.1	Oportunidad de negocio
-2.2	Definición del problema
-
-[3.	Descripción de los interesados y usuarios](#_Toc52661348)
-
-3.1	Resumen de los interesados
-3.2	Resumen de los usuarios
-3.3	Entorno de usuario
-3.4	Perfiles de los interesados
-3.5	Perfiles de los Usuarios
-3.6	Necesidades de los interesados y usuarios
-
-[4.	Vista General del Producto](#_Toc52661349)
-
-4.1	Perspectiva del producto
-4.2	Resumen de capacidades
-4.3	Suposiciones y dependencias
-4.4	Costos y precios
-4.5	Licenciamiento e instalación
-
-[5.	Características del producto](#_Toc52661350)
-
-[6.	Restricciones](#_Toc52661351)
-
-[7.	Rangos de calidad](#_Toc52661352)
-
-[8.	Precedencia y Prioridad](#_Toc52661353)
-
-[9.	Otros requerimientos del producto](#_Toc52661354)
-
+[1.    Introducción](#_Toc52661346)
+1.1    Propósito
+1.2    Alcance
+1.3    Definiciones, Siglas y Abreviaturas
+1.4    Referencias
+1.5    Visión General
+[2.    Posicionamiento](#_Toc52661347)
+2.1    Oportunidad de negocio
+2.2    Definición del problema
+[3.    Descripción de los interesados y usuarios](#_Toc52661348)
+3.1    Resumen de los interesados
+3.2    Resumen de los usuarios
+3.3    Entorno de usuario
+3.4    Perfiles de los interesados
+3.5    Perfiles de los Usuarios
+3.6    Necesidades de los interesados y usuarios
+[4.    Vista General del Producto](#_Toc52661349)
+4.1    Perspectiva del producto
+4.2    Resumen de capacidades
+4.3    Suposiciones y dependencias
+4.4    Costos y precios
+4.5    Licenciamiento e instalación
+[5.    Características del producto](#_Toc52661350)
+[6.    Restricciones](#_Toc52661351)
+[7.    Rangos de calidad](#_Toc52661352)
+[8.    Precedencia y Prioridad](#_Toc52661353)
+[9.    Otros requerimientos del producto](#_Toc52661354)
 [CONCLUSIONES](#_Toc52661355)
-
 [RECOMENDACIONES](#_Toc52661356)
-
 <div style="page-break-after: always; visibility: hidden">\pagebreak</div>
-
 **<u>Informe de Visión</u>**
-
 1. <span id="_Toc52661346" class="anchor"></span>**Introducción**
 
 **1.1	Propósito**
